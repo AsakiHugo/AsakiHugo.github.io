@@ -1,0 +1,281 @@
+@media screen and (max-width: 1024px) {
+
+  /* dashboard content */
+  .dashboard .sidebar__container {
+    left: -60%;
+    width: 16rem;
+    max-width: auto;
+    transition: all 300ms linear;
+  }
+
+  .dashboard .sidebar__container.sidebar__active {
+    left: 0;
+    width: 16rem;
+    max-width: auto;
+  }
+
+  .dashboard main .dashboard__content__container {
+    width: 100%;
+    left: 0rem;
+  }
+
+  .dashboard main .dashboard__content__container.sidebar__active {
+    width: 100%;
+    left: 0rem;
+  }
+
+  .header .nav i.sidebar__active {
+    opacity: 1;
+    display: block;
+    pointer-events: visible;
+  }
+
+  .profile__content .person__name {
+    opacity: 1;
+    display: block;
+  }
+
+  .tables__section .tables__container {
+    grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
+  }
+}
+
+@media screen and (max-width: 810px) {
+
+  /* dashboard content */
+  table {
+    border: 0;
+  }
+
+  table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    border: none;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  table tr {
+    display: block;
+    margin: 0 0 1rem;
+    box-shadow: 0 0.05rem 0.2rem 0 rgba(0, 0, 0, 0.3) inset;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  /* reservation management */
+  .reservation__content__container .reservation__content {
+    flex-direction: column;
+    row-gap: 0.75rem;
+  }
+
+  .reservation__content p {
+    text-align: right;
+  }
+
+  .reservation__content p::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+
+  /* menus management */
+  .menus__container .menus__card__container,
+  .chefs__container .chefs__card__container,
+  .tables__section .tables__container {
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    gap: 1rem;
+  }
+
+  .menus__card__container .menus__card {
+    flex-direction: column;
+    height: min-content;
+  }
+
+  .menus__card .menus__img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 14rem;
+    padding: 0.5rem;
+  }
+
+  .menus__img img {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .menus__card .menus__details {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  /* dashboard content */
+  .reservation__noti__section,
+  .monthly__revenue__section {
+    padding: 2.5rem 1rem 2rem;
+  }
+
+  .header .nav {
+    height: 65px;
+    padding-inline: 1.5rem;
+  }
+
+  .restaurant__logo {
+    width: 9rem;
+  }
+
+  .theme__toggler .toggle-slot {
+    width: 4.5rem;
+  }
+
+  .toggle-checkbox:checked~.toggle-slot .toggle-button {
+    transform: translate(2.65rem, 0.25em);
+  }
+
+  .reservation__noti__section .reservation__noti__container,
+  .monthly__revenue__section .monthly__revenue__container {
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  /* menus management */
+  .menus__section,
+  .chefs__section,
+  .location__section,
+  .tables__section {
+    padding: 2.5rem 1rem 2rem;
+  }
+
+  .menus__section .menus__container,
+  .chefs__container .chefs__card__container,
+  .tables__section .tables__container {
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  .edit__version__container {
+    padding: 2rem 1.5rem;
+  }
+
+  .edit__version__container .edit__menus {
+    padding: 1.5rem 1rem 1.75rem;
+  }
+
+  /* profile */
+  .profile__container .delete__account {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 412px) {
+
+  /* dashboard content */
+  .restaurant__logo {
+    width: 7.5rem;
+  }
+
+  .theme__toggler .toggle-slot {
+    width: 3.75rem;
+  }
+
+  .toggle-checkbox:checked~.toggle-slot .toggle-button {
+    transform: translate(2.5em, 0.25em);
+  }
+
+  .reservation__noti__header .noti__input {
+    row-gap: 0.5rem;
+  }
+
+  .noti__input #date,
+  .noti__input #time,
+  .monthly__revenue__header #month {
+    width: 100%;
+  }
+
+  /* reservation management */
+  .reservation__noti__content .reservation__content__container {
+    row-gap: 1rem;
+  }
+
+  .reservation__content__container .notificationBtn__container {
+    width: 100%;
+  }
+
+  .notificationBtn__container .notificationBtn {
+    width: 100%;
+  }
+
+  /* menus management */
+  .menus__section,
+  .chefs__section,
+  .location__section,
+  .tables__section {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .menus__section .menus__container,
+  .tables__section .tables__container {
+    padding: 0rem;
+  }
+
+  .chefs__container .chefs__card__container {
+    padding: 0 0 1rem;
+  }
+
+  .img__input .menu__image {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .edit__menus form .edit__inputs__container {
+    padding-bottom: 0.5rem;
+  }
+
+  .edit__inputs__container .input__field {
+    margin-bottom: 1rem;
+  }
+
+  /* location management */
+  .contact__info .title,
+  .contact__info .contact__details {
+    width: 100%;
+  }
+
+  .contact__info .title::after {
+    position: absolute;
+    content: ":";
+  }
+
+  .contact__details p {
+    padding-left: 0;
+  }
+
+  .contact__details p::before {
+    content: "";
+  }
+
+  /* profile */
+  .profile__section .profile__container {
+    padding: 2rem 1rem;
+  }
+}

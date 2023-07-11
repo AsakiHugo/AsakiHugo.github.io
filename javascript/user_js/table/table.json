@@ -1,0 +1,26 @@
+[
+    {
+        "id": "01",
+        "tableImg": "/images/restaurant/Cafe.jpg",
+        "tabelType": "family table",
+        "tablePrice": "50,000"
+    },
+    {
+        "id": "02",
+        "tableImg": "/images/restaurant/Bee.jpg",
+        "tabelType": "single table",
+        "tablePrice": "25,000"
+    },
+    {
+        "id": "03",
+        "tableImg": "/images/restaurant/albert-YYZU0Lo1uXE-unsplash.jpg",
+        "tabelType": "couple table",
+        "tablePrice": "32,000"
+    },
+    {
+        "id": "04",
+        "tableImg": "/images/restaurant/Bar.jpg",
+        "tabelType": "party table",
+        "tablePrice": "120,000"
+    }
+]

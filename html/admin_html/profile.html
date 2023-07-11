@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ===== about website info ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SanCho Online Restaurant Reservation System(Admin)" />
+    <meta name="keywords"
+        content="SanCho Restaurant, Online Restaurant Reservation, Online Table Booking, Admin Dashboard, Admin Profile" />
+    <meta name="author" content="Kyaw Khaing" />
+    <meta name="contact" content="kyawkhaing.kk004@gmail.com" />
+
+    <!-- ===== website title with icon ===== -->
+    <link rel="Icon" type="svg" href="/images/logo/Tab_Logo.svg">
+    <title>SanCho Admin Dashboard</title>
+
+    <!-- ===== custom css ===== -->
+    <link rel="stylesheet" href="/css/reusable.css">
+    <link rel="stylesheet" href="/css/admin_css/style.css">
+    <link rel="stylesheet" href="/css/admin_css/media.css">
+
+    <!-- ===== fontawesome cdn ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <div class="section">
+        <div class="container dashboard">
+
+            <!-- sidebar -->
+            <aside class="sidebar__container">
+                <!-- close-btn -->
+                <div class="sidebar__closeBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+                <!-- sidebar profile -->
+                <div class="profile__content">
+                    <a href="" class="profile__img">
+                        <img loading="lazy" src="/images/person/warren-uuVguyksViA-unsplash.jpg" alt="profile-img">
+                    </a>
+                    <p class="person__name">Amara Thiri Phone Myat</p>
+                </div>
+
+                <!-- sidebar content -->
+                <nav class="nav">
+                    <ul>
+                        <li class="nav__list">
+                            <a href="index.html">
+                                <i class="fa-solid fa-house"></i>
+                                <div class="link__name">Dashboard</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="reservation.html">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <div class="link__name">Reservation</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="table.html">
+                                <i class="fa-solid fa-chair"></i>
+                                <div class="link__name">Tables</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="menu.html">
+                                <i class="fa-solid fa-utensils"></i>
+                                <div class="link__name">Menus</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="chef.html">
+                                <i class="fa-solid fa-user"></i>
+                                <div class="link__name">Chef</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="location.html">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="link__name">Location & Contact</div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- logout -->
+                <div class="aside__footer">
+                    <div class="profile__logout">
+                        <a href="/html/user_html/entrance/login.html">
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                            <div class="logout__name">Sign Out</div>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- dashboard container -->
+            <main>
+                <div class="dashboard__content__container">
+
+                    <!-- header -->
+                    <header class="header">
+
+                        <!-- navigation -->
+                        <nav class="nav">
+                            <i class="fa-solid fa-bars"></i>
+
+                            <!-- restaurant logo -->
+                            <div class="restaurant__logo">
+                                <img src="/images/logo/Black logo - no background.svg" alt="restaurant-logo">
+                            </div>
+
+                            <!-- theme toggler -->
+                            <div class="theme__toggler">
+                                <label>
+                                    <input class="toggle-checkbox" type="checkbox">
+                                    <div class="toggle-slot">
+                                        <div class="toggle-button"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </nav>
+                    </header>
+
+                    <!-- table container -->
+                    <section class="profile__section">
+                        <div class="profile__container">
+
+                            <!-- profile picture upload -->
+                            <div class="profile__img__editor">
+
+                                <!-- profile img -->
+                                <div class="profile__img__container">
+                                    <div class="profile__image">
+                                        <img loading="lazy" src="/images/person/warren-uuVguyksViA-unsplash.jpg"
+                                            alt="profile-img">
+                                    </div>
+                                    <div class="profile__details">
+                                        <p class="username">Amara Thiri Kyaw</p>
+                                        <p class="member__status">Member since 2023</p>
+                                    </div>
+                                </div>
+
+                                <!-- upload img -->
+                                <div class="upload__btn__container">
+                                    <label for="upload__img" class="button upload__btn">Change profile</label>
+                                    <input style="display: none" type="file" id="upload__img" accept="image/*"></input>
+                                </div>
+                            </div>
+
+                            <!-- profile editing input -->
+                            <div class="profile__edit__input">
+
+                                <!-- username info -->
+                                <div class="profile__info">
+                                    <p class="info__field">Username</p>
+                                    <div class="profile__editor">
+                                        <p>Amara Thiri Kyaw</p>
+                                        <h3 class="editing">Edit</h3>
+                                        <h3 class="closeEdit">Close</h3>
+                                    </div>
+                                </div>
+
+                                <!-- username input -->
+                                <div class="edit__input__container">
+                                    <div class="edit__input">
+                                        <input type="text" name="username" id="username" placeholder="Enter Username">
+                                    </div>
+
+                                    <div class="save__btn__container">
+                                        <button class="button save__btn">Save</button>
+                                    </div>
+                                </div>
+
+                                <!-- error input -->
+                                <span class="error">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    <p class="error__text">Username must not be empty</p>
+                                </span>
+                            </div>
+
+                            <div class="profile__edit__input">
+
+                                <!-- email info -->
+                                <div class="profile__info">
+                                    <p class="info__field">Email</p>
+                                    <div class="profile__editor">
+                                        <p>amarathirikyaw.amtk@gmail.com</p>
+                                        <h3 class="editing">Edit</h3>
+                                        <h3 class="closeEdit">Close</h3>
+                                    </div>
+                                </div>
+
+                                <!-- email input -->
+                                <div class="edit__input__container">
+                                    <div class="edit__input">
+                                        <input type="text" name="email" id="email" placeholder="Enter Your Email">
+                                    </div>
+
+                                    <div class="save__btn__container">
+                                        <button class="button save__btn">Save</button>
+                                    </div>
+                                </div>
+
+                                <!-- error input -->
+                                <span class="error">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    <p class="error__text">Email must not be empty</p>
+                                </span>
+                            </div>
+
+                            <div class="profile__edit__input">
+
+                                <!-- password info -->
+                                <div class="profile__info">
+                                    <p class="info__field">Password</p>
+                                    <div class="profile__editor">
+                                        <p>12345Kk@</p>
+                                        <h3 class="editing">Edit</h3>
+                                        <h3 class="closeEdit">Close</h3>
+                                    </div>
+                                </div>
+
+                                <!-- password input -->
+                                <div class="edit__input__container">
+                                    <div class="edit__input">
+                                        <input type="text" name="password" id="password"
+                                            placeholder="Enter New Password">
+                                    </div>
+
+                                    <div class="save__btn__container">
+                                        <button class="button save__btn">Save</button>
+                                    </div>
+                                </div>
+
+                                <!-- error input -->
+                                <span class="error">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    <p class="error__text">Password must not be empty</p>
+                                </span>
+                            </div>
+
+                            <!-- delete account -->
+                            <div class="delete__account">
+
+                                <!-- delete info -->
+                                <div class="delete__info">
+                                    <h3>Delete Your Account</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque error
+                                        praesentium hic sunt
+                                        earum distinctio quae sequi eligendi consequatur? Repudiandae.
+                                    </p>
+                                </div>
+
+                                <!-- delete btn -->
+                                <div class="delete__btn__container">
+                                    <button class="button delete__btn">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- custom js -->
+    <script src="/javascript/admin_js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,873 @@
+@media screen and (max-width: 1024px) {
+
+    .signup__section .container,
+    .login__section .container {
+        column-gap: .25rem;
+    }
+
+    .singup__container .restaurant__logo,
+    .login__container .restaurant__logo {
+        width: 200px;
+        margin-bottom: 1.25rem;
+    }
+
+    .signup__form h2,
+    .login__form h2 {
+        margin-bottom: 1.25rem;
+    }
+
+    .signup__form .input__field__container,
+    .login__form .input__field__container {
+        row-gap: .5rem;
+    }
+
+    .signup__form .input__field,
+    .login__form .input__field,
+    .signup__form .button,
+    .login__form .button,
+    .singup__container .google__btn {
+        height: 50px;
+    }
+
+    .signup__form .signup__btn,
+    .login__form .login__btn {
+        width: 180px;
+        margin-top: 2.5rem;
+    }
+
+    .singup__container .middle__line {
+        width: 100%;
+        margin-block: 1.25rem;
+    }
+
+    .signup__section .container .right__side,
+    .login__section .container .right__side {
+        padding: .5rem .5rem .5rem 0rem;
+    }
+
+    /* ===== Header ===== */
+    .header .nav {
+        padding-inline: 1.25rem;
+    }
+
+    .header .nav .nav__left {
+        column-gap: 1.25rem;
+    }
+
+    .nav__left .nav__lists,
+    .header .nav .nav__right {
+        column-gap: .5rem;
+    }
+
+    .nav__right .social__lists {
+        column-gap: .25rem;
+    }
+
+    .nav__right .profile {
+        margin-left: .75rem;
+    }
+
+    /* ===== Menu ===== */
+    .menu__container .showcase__menu {
+        padding: 1.25rem 1rem;
+    }
+
+    .showcase__menu .view__more__btn a {
+        width: 180px;
+        height: 55px;
+    }
+
+    .menu__container .special__menu {
+        width: 90%;
+    }
+
+    /* ===== Chef ===== */
+    .chef__card__container .chef__card {
+        gap: 3rem;
+    }
+
+    .chef__card .left__side {
+        width: 45%;
+    }
+
+    .chef__card .right__side {
+        width: 55%;
+    }
+
+    .left__side .chef__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .chef__info .chef__name {
+        margin-bottom: 1rem;
+    }
+
+    .chef__info .chef__details {
+        margin-bottom: 2.5rem;
+    }
+
+    /* ===== Footer ===== */
+    .footer__container .subscribe__container {
+        align-items: flex-start;
+    }
+
+    .subscribe__container .subscribe__input {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+
+    .subscribe__input .subscribe__field {
+        width: 18rem;
+        height: 50px;
+    }
+
+    .subscribe__input .subscribe__btn {
+        width: 8rem;
+        height: 50px;
+    }
+
+    .footer__container .line {
+        margin-block: 2rem 1.25rem;
+    }
+
+    .footer__container .footer__content {
+        gap: 1rem;
+    }
+
+    .footer__content .footer__first__content,
+    .footer__content .footer__second__content,
+    .footer__content .footer__third__content {
+        width: 50%;
+    }
+
+    .reservation__container .reservation__content:nth-child(2) {
+        margin-bottom: 4rem;
+    }
+
+    /* ===== Scroll up home arrow ===== */
+    .scroll__up {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 60px;
+        height: 60px;
+    }
+
+    /* ===== Profile ===== */
+    .profile__container {
+        padding: 4rem 2rem 2rem;
+    }
+
+    .profile__container .homeback__icon {
+        left: 2.5rem;
+    }
+
+    /* ===== Table Info ===== */
+    .table__container {
+        padding: 4rem 2rem;
+    }
+
+    .text__effect__container .img__effect {
+        max-height: 250px;
+        height: 30vh;
+    }
+}
+
+@media screen and (max-width: 810px) {
+
+    /* ===== Header ===== */
+    .nav__left .nav__lists {
+        position: absolute;
+        left: -100%;
+        top: 0;
+        width: 75%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5rem 6rem;
+        row-gap: 2.5rem;
+        background-color: var(--white-color);
+        box-shadow: var(--shadow);
+        transition: left 500ms cubic-bezier(0.215, 0.610, 0.355, 1);
+        z-index: 999;
+    }
+
+    .darkTheme .nav__left .nav__lists {
+        background-color: var(--background-color);
+        box-shadow: var(--shadow);
+    }
+
+    .nav__left .nav__lists.active__side {
+        left: 0;
+    }
+
+    .theme__toggler .toggle-slot {
+        width: 3.95rem;
+        height: 1.92rem;
+        font-size: 9px;
+    }
+
+    .profile .profile__img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav .nav__right .hamburger {
+        display: grid;
+    }
+
+    /* ===== Footer ===== */
+    .footer__container .footer__content {
+        flex-wrap: wrap;
+    }
+
+    .footer__content .footer__first__content,
+    .footer__content .footer__third__content {
+        width: 48%;
+    }
+
+    .footer__content .footer__first__content {
+        order: 2;
+    }
+
+    .footer__content .footer__second__content {
+        order: 1;
+        width: 100%;
+    }
+
+    .footer__content .footer__third__content {
+        order: 3;
+    }
+
+    .footer__first__content .contact__details__container,
+    .footer__third__content .social__details__container,
+    .footer__second__content .reservation__details__container {
+        width: 100%;
+    }
+
+    .footer__second__content .reservation__details__container,
+    .reservation__details__container .reservation__button {
+        align-items: flex-start;
+    }
+
+    /* ===== Menus ===== */
+    .menus__container .menus__card__container {
+        gap: 1.5rem;
+    }
+
+    .menus__explaination__container .menus__explaination {
+        max-width: 30rem;
+        flex-direction: column;
+    }
+
+    .menus__explaination .menus__img__card,
+    .menus__explaination .menus__exp__details {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .signup__section .container,
+    .login__section .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0rem;
+        background-image: url(/images/restaurant/marika-pamp-4c7H6AjzxqE-unsplash.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .signup__section .container {
+        background-image: url(/images/restaurant/chesley-mccarty-ZimlF1xeZ8k-unsplash.jpg);
+    }
+
+    .login__section .container {
+        background-image: url(/images/restaurant/marika-pamp-4c7H6AjzxqE-unsplash.jpg);
+    }
+
+    .signup__section .container .left__side,
+    .login__section .container .left__side {
+        width: 100%;
+    }
+
+    .left__side .singup__container,
+    .left__side .login__container {
+        padding: 2rem 1.5rem 3rem;
+        border-radius: .5rem;
+        box-shadow: var(--shadow);
+        background-color: var(--white-color);
+    }
+
+    .signup__section .container .right__side,
+    .login__section .container .right__side {
+        display: none;
+    }
+
+    /* ===== Header ===== */
+    .header .nav {
+        padding-inline: 1rem;
+    }
+
+    .nav__left .restaurant__logo {
+        width: 8rem;
+    }
+
+    .social__lists .social__list {
+        width: 28px;
+        height: 28px;
+    }
+
+    .social__lists .social__list:hover {
+        font-size: calc(var(--normal-font-size) + 4px);
+    }
+
+    .theme__toggler .toggle-slot {
+        width: 3.25rem;
+    }
+
+    .toggle-checkbox:checked~.toggle-slot .toggle-button {
+        transform: translate(2.5em, 0.25em);
+    }
+
+    .nav__right .profile {
+        margin-left: .25rem;
+    }
+
+    .profile .profile__img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav .nav__right .hamburger {
+        width: 35px;
+        height: 35px;
+        margin-left: .25rem;
+    }
+
+    .nav__left .nav__lists {
+        padding: 5rem 4rem;
+    }
+
+    /* ===== Menu ===== */
+    .menu__container .menu__card__container {
+        padding-inline: .65rem;
+    }
+
+    .menu__container .special__menu {
+        width: 100%;
+        height: min-content;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        row-gap: 1.25rem;
+        margin: 6rem auto 0;
+    }
+
+    .special__menu .small__img__container {
+        display: none;
+    }
+
+    .large__img__container .specail__large__img {
+        width: 18rem;
+        height: 12rem;
+    }
+
+    .special__menu .special__menu__materials {
+        row-gap: .25rem;
+    }
+
+    .special__menu .special__menu__materials h2 {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-semibold);
+    }
+
+    .special__menu .specail__menu__details {
+        width: 75%;
+    }
+
+    /* ===== Chef ===== */
+    .chef__conatiner {
+        padding: 4rem 2rem 2rem;
+    }
+
+    .chef__card__container .chef__card {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .chef__card .left__side {
+        width: 100%;
+        height: 14rem;
+    }
+
+    .chef__card .right__side {
+        width: 100%;
+    }
+
+    /* ===== Footer ===== */
+    .footer__container .subscribe__container {
+        flex-direction: column;
+        row-gap: 1.75rem;
+    }
+
+    .subscribe__container .subscribe__content,
+    .subscribe__container .subscribe__input {
+        width: 100%;
+    }
+
+    .subscribe__container .subscribe__input {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 1.75rem;
+    }
+
+    .subscribe__input .subscribe__field {
+        width: 18rem;
+        height: 50px;
+    }
+
+    /* ===== Reservation ===== */
+    .reservation__content .reservation__content__details {
+        columns: 1;
+    }
+
+    .reservation__info__details .reservation__info__header {
+        margin-bottom: 2.25rem;
+    }
+
+    .reservation__info__details .reservation__inputs__container {
+        gap: 1.75rem 0rem;
+        padding-inline: .5rem;
+    }
+
+    .reservation__inputs__container .input__tag__container {
+        width: 100%;
+    }
+
+    .time__input__container .time__input,
+    .payment__input__container .payment__input {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .time__container .time__status {
+        margin-bottom: 0.75rem;
+    }
+
+    /* ===== Profile ===== */
+    .profile__container .profile__img__editor {
+        flex-direction: column;
+        row-gap: 1.25rem;
+    }
+
+    .profile__img__editor .profile__img__container {
+        flex-direction: column;
+        row-gap: 0.75rem;
+    }
+
+    .profile__img__container .profile__details {
+        row-gap: .25rem;
+    }
+
+    .profile__edit__input .edit__input__container {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 1rem;
+    }
+
+    .edit__input__container .edit__input input {
+        width: 100%;
+    }
+
+    /* ===== Menus ===== */
+    .menus__container {
+        padding: 7rem 2rem 3rem;
+    }
+
+    .category__container .categories {
+        width: 385px;
+        height: 45px;
+        border-radius: .35rem;
+    }
+
+    .categories .category {
+        border-radius: .35rem;
+        padding-block: 0;
+    }
+
+    .categories .all {
+        width: 80px;
+    }
+
+    .categories .dishes {
+        width: 95px;
+    }
+
+    .categories .drinks {
+        width: 95px;
+    }
+
+    .categories .desserts {
+        width: 115px;
+    }
+
+    .categories .animation {
+        border-radius: .35rem;
+    }
+
+    .all.active__menus~.animation {
+        width: 80px;
+        left: 0px;
+    }
+
+    .dishes.active__menus~.animation {
+        width: 95px;
+        left: 80px;
+    }
+
+    .drinks.active__menus~.animation {
+        width: 95px;
+        left: 175px;
+    }
+
+    .desserts.active__menus~.animation {
+        width: 115px;
+        left: 270px;
+    }
+
+    .menus__container .line {
+        margin-block: 1.5rem;
+    }
+
+    .menus__card__container .menus__card {
+        padding: 1.5rem 1rem;
+    }
+
+    .menus__card .menus__img__container {
+        margin-bottom: 1.25rem;
+    }
+
+    .menus__card .menus__img {
+        width: 12rem;
+        height: 10rem;
+    }
+
+    .menus__card .quick__view {
+        width: 10rem;
+    }
+
+    .menus__explaination__container .menus__explaination {
+        padding: 1.25rem;
+    }
+
+    /* ===== Table Info ===== */
+    .text__effect__container .img__effect {
+        max-height: 180px;
+        height: 25vh;
+    }
+
+    .text__effect__container .text {
+        font-size: 2.5rem;
+    }
+
+    .moving__text span {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 412px) {
+
+    .signup__section .container .left__side,
+    .login__section .container .left__side {
+        padding: 2rem .5rem;
+    }
+
+    .left__side .singup__container,
+    .left__side .login__container {
+        padding: 1.5rem .85rem 2.5rem;
+    }
+
+    .singup__container .restaurant__logo,
+    .login__container .restaurant__logo {
+        width: 140px;
+        margin-bottom: .75rem;
+    }
+
+    .signup__form h2,
+    .login__form h2 {
+        font-size: var(--h1-font-size);
+        margin-bottom: 1.25rem;
+    }
+
+    /* ===== Header ===== */
+    .header .nav .nav__right {
+        position: fixed;
+        bottom: 0;
+        left: -100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        row-gap: 1rem;
+        padding: 1rem 2rem;
+        z-index: 999;
+        transition: left 500ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+
+    .header .nav .nav__right.active__side {
+        left: 0;
+    }
+
+    .profile .profile__username {
+        display: block;
+    }
+
+    .nav__right .theme__toggler {
+        order: -1;
+    }
+
+    .theme__toggler .toggle-slot {
+        width: 4.5rem;
+    }
+
+    .toggle-checkbox:checked~.toggle-slot .toggle-button {
+        transform: translate(2.65rem, 0.25em);
+    }
+
+    .nav .nav__right .hamburger {
+        position: fixed;
+        top: 1.25rem;
+        right: 1rem;
+    }
+
+    .nav__left .nav__lists {
+        padding: 3.5rem 2rem;
+        row-gap: 2rem;
+    }
+
+    /* ===== Home ===== */
+    .home__container .hero__content {
+        align-items: flex-start;
+        padding-inline: 1rem;
+    }
+
+    .hero__content .restaurant__timeDay {
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+    }
+
+    .restaurant__timeDay .restaurant__time {
+        text-align: left;
+    }
+
+    .restaurant__timeDay .restaurant__day {
+        justify-content: flex-start;
+        gap: 1.25rem;
+    }
+
+    .restaurant__day .line {
+        width: 60px;
+    }
+
+    .hero__content .hero__text {
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+
+    .reservation__btn a {
+        width: 190px;
+        height: 55px;
+    }
+
+    .swiper .swiper-button-prev,
+    .swiper .swiper-button-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .swiper [class^="swiper-button-"]::after {
+        font-size: 15px;
+    }
+
+    /* ===== Menu ===== */
+    .menu__container {
+        padding: 4rem 1.25rem 1rem;
+    }
+
+    .menu__container .special__menu {
+        row-gap: 0.75rem;
+        margin: 4em auto 0;
+    }
+
+    .special__menu .specail__menu__details {
+        width: 100%;
+    }
+
+    /* ===== Chef ===== */
+    .chef__conatiner {
+        padding: 4rem 1.25rem 1rem;
+    }
+
+    .chef__card__container .chef__card {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .chef__info .chef__name {
+        margin-bottom: .35rem;
+    }
+
+    /* ===== Menu ===== */
+    .location__container {
+        padding: 4rem 1.25rem 1rem;
+    }
+
+    .location__container .google__map {
+        height: 320px;
+    }
+
+    /* ===== Footer ===== */
+    .footer__container {
+        padding: 4rem 1.25rem 0rem;
+    }
+
+    .footer__content .footer__first__content,
+    .footer__content .footer__third__content {
+        width: 100%;
+    }
+
+    .footer__second__content .reservation__details__container {
+        row-gap: 1.5rem;
+    }
+
+    .footer__container .copyright {
+        justify-content: center;
+        padding-bottom: 1.25rem;
+    }
+
+    /* ===== Reservation ===== */
+    .reservation__container {
+        padding: 6.75rem 1.25rem 0rem;
+    }
+
+    .reserve__btn__container .reservation__button {
+        height: 55px;
+    }
+
+    .reservation__container .reservation__content {
+        margin-bottom: 3.25rem;
+    }
+
+    .reservation__container .reservation__content:nth-child(2) {
+        margin-bottom: 2.5rem;
+    }
+
+    .reservation__content .reservation__title__header {
+        margin-bottom: 1.25rem;
+    }
+
+    .reservation__content__details p {
+        padding: 0.5rem;
+    }
+
+    .reservation__info__details .reservation__inputs__container {
+        padding-inline: 0rem;
+    }
+
+    /* ===== Scroll up home arrow ===== */
+    .scroll__up {
+        bottom: .75rem;
+        right: .75rem;
+    }
+
+    /* ===== Profile ===== */
+    .profile__container {
+        padding: 4rem 1rem 2rem;
+    }
+
+    .profile__info .profile__editor {
+        column-gap: .5rem;
+    }
+
+    .profile__container .delete__account {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 1rem;
+    }
+
+    /* ===== Menus ===== */
+    .menus__container {
+        padding: 6rem 1rem 2rem;
+    }
+
+    .menus__section .footer__container {
+        padding: 0rem 1rem;
+    }
+
+    .category__container .categories {
+        width: 305px;
+        height: 40px;
+    }
+
+    .categories .category {
+        font-size: var(--small-font-size);
+    }
+
+    .categories .all {
+        width: 60px;
+    }
+
+    .categories .dishes {
+        width: 75px;
+    }
+
+    .categories .drinks {
+        width: 75px;
+    }
+
+    .categories .desserts {
+        width: 95px;
+    }
+
+    .all.active__menus~.animation {
+        width: 60px;
+        left: 0px;
+    }
+
+    .dishes.active__menus~.animation {
+        width: 75px;
+        left: 60px;
+    }
+
+    .drinks.active__menus~.animation {
+        width: 75px;
+        left: 135px;
+    }
+
+    .desserts.active__menus~.animation {
+        width: 95px;
+        left: 210px;
+    }
+
+    /* ===== Table Info ===== */
+    .table__container {
+        padding: 3rem 1rem;
+    }
+
+    .table__container .text__effect__container {
+        margin: 1.5rem 0;
+    }
+
+    .text__effect__container .text {
+        font-size: 1.75rem;
+    }
+
+    .moving__text span {
+        font-size: 5rem;
+    }
+}

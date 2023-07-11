@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ===== about website info ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SanCho Restaurant's SignUp Form" />
+    <meta name="keywords" content="SanCho Restaurant, SignUp Form" />
+    <meta name="author" content="Kyaw Khaing" />
+    <meta name="contact" content="kyawkhaing.kk004@gmail.com" />
+
+    <!-- ===== website title with icon ===== -->
+    <link rel="Icon" type="svg" href="/images/logo/Tab_Logo.svg">
+    <title>SanCho Restaurant</title>
+
+    <!-- ===== custom css ===== -->
+    <link rel="stylesheet" href="/css/reusable.css">
+    <link rel="stylesheet" href="/css/user_css/style.css">
+    <link rel="stylesheet" href="/css/user_css/media.css">
+
+    <!-- ===== fontawesome cdn ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <!-- signup -->
+    <main class="signup__section section">
+        <div class="container">
+
+            <!-- container left side -->
+            <div class="left__side">
+                <div class="singup__container">
+                    <div class="restaurant__logo">
+                        <img loading="lazy" src="/images/logo/Black logo - no background.svg" alt="restaurant-logo">
+                    </div>
+
+                    <!-- signup form -->
+                    <form class="signup__form" action="login.html" method="post">
+                        <h2>Create an account</h2>
+
+                        <!-- username -->
+                        <div class="input__field__container usernameField">
+                            <div class="input__field">
+                                <i class="fa-solid fa-user"></i>
+                                <input class="input__tag" type="text" name="username" id="username"
+                                    placeholder="Username">
+                            </div>
+
+                            <span class="error">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <p class="error__text">Username must be filled</p>
+                            </span>
+                        </div>
+
+                        <!-- email -->
+                        <div class="input__field__container emailField">
+                            <div class="input__field">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input class="input__tag" type="text" name="email" id="email" placeholder="Email">
+                            </div>
+
+                            <span class="error">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <p class="error__text">Please enter a valid email</p>
+                            </span>
+                        </div>
+
+                        <!-- password -->
+                        <div class="input__field__container passwordField">
+                            <div class="input__field">
+                                <i class="fa-solid fa-lock"></i>
+                                <input class="input__tag" type="password" name="password" id="password"
+                                    placeholder="Password">
+
+                                <div class="toggle__password">
+                                    <i class="fa-solid fa-eye-slash"></i>
+                                </div>
+                            </div>
+
+                            <span class="error">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <p class="error__text">
+                                    Please enter atleast 8 charatcer with number, symbol, small and
+                                    capital letter.
+                                </p>
+                            </span>
+                        </div>
+
+                        <!-- confirm-password -->
+                        <div class="input__field__container conPasswordField">
+                            <div class="input__field">
+                                <i class="fa-solid fa-lock"></i>
+                                <input class="input__tag" type="password" name="con__password" id="con__password"
+                                    placeholder="Confirmed-Password">
+
+                                <div class="toggle__password">
+                                    <i class="fa-solid fa-eye-slash"></i>
+                                </div>
+                            </div>
+
+                            <span class="error">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <p class="error__text">Your password doesn't match</p>
+                            </span>
+                        </div>
+
+                        <button type="submit" class="button signup__btn">SignUp</button>
+
+                        <p class="to__login">
+                            Already have an account?
+                            <a href="login.html">Login</a>
+                        </p>
+                    </form>
+
+                    <!-- middle line -->
+                    <div class="middle__line">
+                        <div class="line"></div>
+                        <p>or</p>
+                        <div class="line"></div>
+                    </div>
+
+                    <!-- google account -->
+                    <button class="google__btn">
+                        <a href="#">
+                            <i class="fa-brands fa-google"></i>
+                            <p>SignUp with Google</p>
+                        </a>
+                    </button>
+                </div>
+            </div>
+
+            <!-- container right side -->
+            <div class="right__side">
+                <img loading="lazy" src="/images/restaurant/chesley-mccarty-ZimlF1xeZ8k-unsplash.jpg"
+                    alt="restaurant-img">
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== custom javascript ===== -->
+    <script src="/javascript/user_js/entrance/singup.js"></script>
+</body>
+
+</html>

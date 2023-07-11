@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ===== about website info ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SanCho Online Restaurant Reservation System(Admin)" />
+    <meta name="keywords"
+        content="SanCho Restaurant, Online Restaurant Reservation, Online Table Booking, Admin Dashboard" />
+    <meta name="author" content="Kyaw Khaing" />
+    <meta name="contact" content="kyawkhaing.kk004@gmail.com" />
+
+    <!-- ===== website title with icon ===== -->
+    <link rel="Icon" type="svg" href="/images/logo/Tab_Logo.svg">
+    <title>SanCho Admin Dashboard</title>
+
+    <!-- ===== custom css ===== -->
+    <link rel="stylesheet" href="/css/reusable.css">
+    <link rel="stylesheet" href="/css/admin_css/style.css">
+    <link rel="stylesheet" href="/css/admin_css/media.css">
+
+    <!-- ===== fontawesome cdn ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <div class="section">
+        <div class="container dashboard">
+
+            <!-- sidebar -->
+            <aside class="sidebar__container">
+                <!-- close-btn -->
+                <div class="sidebar__closeBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+                <!-- sidebar profile -->
+                <div class="profile__content">
+                    <a href="profile.html" class="profile__img">
+                        <img loading="lazy" src="/images/person/warren-uuVguyksViA-unsplash.jpg" alt="profile-img">
+                    </a>
+                    <p class="person__name">Amara Thiri Phone Myat</p>
+                </div>
+
+                <!-- sidebar content -->
+                <nav class="nav">
+                    <ul>
+                        <li class="nav__list">
+                            <a href="">
+                                <i class="fa-solid fa-house"></i>
+                                <div class="link__name">Dashboard</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="reservation.html">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <div class="link__name">Reservation</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="table.html">
+                                <i class="fa-solid fa-chair"></i>
+                                <div class="link__name">Tables</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="menu.html">
+                                <i class="fa-solid fa-utensils"></i>
+                                <div class="link__name">Menus</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="chef.html">
+                                <i class="fa-solid fa-user"></i>
+                                <div class="link__name">Chef</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="location.html">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="link__name">Location & Contact</div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- logout -->
+                <div class="aside__footer">
+                    <div class="profile__logout">
+                        <a href="/html/user_html/entrance/login.html">
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                            <div class="logout__name">Sign Out</div>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- dashboard container -->
+            <main>
+                <div class="dashboard__content__container">
+
+                    <!-- header -->
+                    <header class="header">
+
+                        <!-- navigation -->
+                        <nav class="nav">
+                            <i class="fa-solid fa-bars"></i>
+
+                            <!-- restaurant logo -->
+                            <div class="restaurant__logo">
+                                <img src="/images/logo/Black logo - no background.svg" alt="restaurant-logo">
+                            </div>
+
+                            <!-- theme toggler -->
+                            <div class="theme__toggler">
+                                <label>
+                                    <input class="toggle-checkbox" type="checkbox">
+                                    <div class="toggle-slot">
+                                        <div class="toggle-button"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </nav>
+                    </header>
+
+                    <!-- reservation notification container -->
+                    <section class="reservation__noti__section">
+                        <div class="reservation__noti__container">
+
+                            <!-- notification header -->
+                            <div class="reservation__noti__header">
+                                <h2>reservation notification</h2>
+
+                                <div class="noti__input">
+                                    <input type="date" name="date" id="date">
+
+                                    <select name="time" id="time">
+                                        <option value="default">Time</option>
+                                        <option value="9:00 am">9:00 am</option>
+                                        <option value="10:00 am">10:00 am</option>
+                                        <option value="11:00 am">11:00 am</option>
+                                        <option value="12:00 pm">12:00 pm</option>
+                                        <option value="1:00 pm">1:00 pm</option>
+                                        <option value="4:00 pm">4:00 pm</option>
+                                        <option value="6:00 pm">6:00 pm</option>
+                                        <option value="8:00 pm">8:00 pm</option>
+                                        <option value="10:00 pm">10:00 pm</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- notification content -->
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Customer Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Phone</th>
+                                        <th scope="col">Person</th>
+                                        <th scope="col">Time</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="content__rows">
+                                </tbody>
+                            </table>
+
+                            <!-- notification footer -->
+                            <div class="reservation__noti__footer">
+                                <!-- pages shower -->
+                                <p class="pages__shower">
+                                    Pages
+                                    <span class="current__page">1</span>
+                                    of
+                                    <span class="total__page">2</span>
+                                </p>
+
+                                <div class="pages__slider">
+                                    <i class="fa-solid fa-angles-left"></i>
+                                    <i class="fa-solid fa-angles-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- monthly revenue container -->
+                    <section class="monthly__revenue__section">
+                        <div class="monthly__revenue__container">
+
+                            <!-- monthly revenue header -->
+                            <div class="monthly__revenue__header">
+                                <h2>Monthly revenue</h2>
+
+                                <select name="month" id="month">
+                                    <option value="Jaunary">Jaunary</option>
+                                    <option value="February">February</option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="July">July</option>
+                                    <option value="August">August</option>
+                                    <option value="September">September</option>
+                                    <option value="October">October</option>
+                                    <option value="November">November</option>
+                                    <option value="December">December</option>
+                                </select>
+                            </div>
+
+                            <!-- monthly revenue content -->
+                            <div class="revenue__content">
+                                <div class="revenue__container">
+                                    <p class="week__count">Week 1</p>
+                                    <div class="revenue__bar">
+                                        <div class="progress__bar">25%</div>
+                                    </div>
+                                </div>
+                                <div class="revenue__container">
+                                    <p class="week__count">Week 2</p>
+                                    <div class="revenue__bar">
+                                        <div class="progress__bar">85%</div>
+                                    </div>
+                                </div>
+                                <div class="revenue__container">
+                                    <p class="week__count">Week 3</p>
+                                    <div class="revenue__bar">
+                                        <div class="progress__bar">50%</div>
+                                    </div>
+                                </div>
+                                <div class="revenue__container">
+                                    <p class="week__count">Week 4</p>
+                                    <div class="revenue__bar">
+                                        <div class="progress__bar">70%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- custom js -->
+    <script src="/javascript/admin_js/script.js"></script>
+
+</body>
+
+</html>

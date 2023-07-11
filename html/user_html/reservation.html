@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ===== about website info ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SanCho Online Restaurant Reservation System" />
+    <meta name="keywords"
+        content="SanCho Restaurant, Online Restaurant Reservation, Online Table Booking, Reservation Form, Booking Form" />
+    <meta name="author" content="Kyaw Khaing" />
+    <meta name="contact" content="kyawkhaing.kk004@gmail.com" />
+
+    <!-- ===== website title with icon ===== -->
+    <link rel="Icon" type="svg" href="/images/logo/Tab_Logo.svg">
+    <title>SanCho Restaurant</title>
+
+    <!-- ===== custom css ===== -->
+    <link rel="stylesheet" href="/css/reusable.css">
+    <link rel="stylesheet" href="/css/user_css/style.css">
+    <link rel="stylesheet" href="/css/user_css/media.css">
+
+    <!-- ===== fontawesome cdn ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <header class="header section">
+
+        <!-- navigation -->
+        <nav class="nav container">
+            <div class="nav__left">
+
+                <!-- restaurant logo -->
+                <div class="restaurant__logo">
+                    <img loading="lazy" src="/images/logo/Black logo - no background.svg" alt="restaurant-logo">
+                </div>
+
+                <!-- nav lists -->
+                <ul class="nav__lists">
+                    <li class="nav__list">
+                        <a href="index.html#home" class="nav__link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav__list">
+                        <a href="index.html#menu" class="nav__link">
+                            Menu
+                        </a>
+                    </li>
+                    <li class="nav__list">
+                        <a href="index.html#chef" class="nav__link">
+                            Chef
+                        </a>
+                    </li>
+                    <li class="nav__list">
+                        <a href="index.html#location" class="nav__link">
+                            Location
+                        </a>
+                    </li>
+                    <li class="nav__list">
+                        <a href="" class="nav__link">
+                            Reservation
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__right">
+                <!-- social lists -->
+                <ul class="social__lists">
+                    <li class="social__list">
+                        <a href="https://www.facebook.com/profile.php?id=100051889950358&mibextid=ZbWKwL"
+                            target="_blank" rel="noopener noreferrer" class="social__link">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="social__list">
+                        <a href="https://instagram.com/kyawkhaing.kk003?igshid=NTc4MTIwNjQ2YQ==" target="_blank"
+                            rel="noopener noreferrer" class="social__link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="social__list">
+                        <a href="https://t.me/Hugo123hg" target="_blank" rel="noopener noreferrer" class="social__link">
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- theme toggler -->
+                <div class="theme__toggler">
+                    <label>
+                        <input class="toggle-checkbox" type="checkbox">
+                        <div class="toggle-slot">
+                            <div class="toggle-button"></div>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- profile -->
+                <div class="profile">
+                    <div class="profile__img">
+                        <img src="/images/person/warren-uuVguyksViA-unsplash.jpg" class="profile__img"
+                            alt="profile-img">
+                    </div>
+                    <p class="profile__username">
+                        Eaint Amara Thiri
+                    </p>
+                </div>
+
+                <!-- side-bar toggler -->
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars active__side"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+            <div class="overlay"></div>
+        </nav>
+    </header>
+
+    <main class="section">
+        <div class="container reservation__container">
+
+            <!-- notifying about reservation -->
+            <div class="reservation__content">
+                <div class="reservation__title__header">
+                    <h3 class="reservation__title__order">01</h3>
+                    <h2 class="reservation__title">Good to know</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="reservation__content__details">
+                    <p>
+                        We appreciate your interest in dining at our restaurant. To make a reservation, please utilize
+                        the convenient form below. We kindly ask that you submit your reservation request at least one
+                        week in advance using this form.
+                    </p>
+                    <p>
+                        For larger parties consisting of more than seven guests, we kindly request that you contact our
+                        reservation line at <span>09199847397</span> to ensure we can accommodate your group
+                        comfortably.
+                    </p>
+                    <p>
+                        We understand the importance of confirming your reservation to ensure a seamless dining
+                        experience. Our dedicated team will personally reach out to you to confirm your reservation at
+                        least 24 hours prior to your scheduled date.
+                    </p>
+                    <p>
+                        We strive to provide exceptional service and create memorable dining experiences, and we look
+                        forward to welcoming you and your party to our establishment soon!
+                    </p>
+                </div>
+            </div>
+
+            <!-- making reservation -->
+            <div class="reservation__content">
+                <div class="reservation__title__header">
+                    <h3 class="reservation__title__order">02</h3>
+                    <h2 class="reservation__title">Make a reservation</h3>
+                        <div class="line"></div>
+                </div>
+
+                <form action="index.html" method="post">
+
+                    <!-- date and time information -->
+                    <div class="reservation__info__details">
+
+                        <!-- reservation heading -->
+                        <div class="reservation__info__header">
+                            <h3 class="order__number">1</h3>
+                            <div class="reservation__info__title">
+                                <p>Date and time</p>
+                                <i class="fa-solid fa-chevron-down active__dropDown"></i>
+                            </div>
+                        </div>
+
+                        <!-- date and time input container -->
+                        <div class="reservation__inputs__container active__inputs">
+                            <!-- date -->
+                            <div class="input__tag__container date__input">
+                                <div class="input__fields">
+                                    <input class="field__input" type="date" name="date" id="date">
+                                </div>
+
+                                <p class="info__text">Reservation date (required)</p>
+
+                                <span class="error">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    <p class="error__text">Reservation date must be filled</p>
+                                </span>
+                            </div>
+
+                            <!-- total guests
+                            <div class="input__tag__container guest__input">
+                                <div class="input__fields">
+                                    <i class="fa-solid fa-users"></i>
+                                    <input class="field__input" type="number" name="guest" id="guest"
+                                        placeholder="Enter Party Size" min="1" max="7">
+                                </div>
+
+                                <p class="info__text">Total guest person be between 1 and 7 (required)</p>
+
+                                <span class="error">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    <p class="error__text">Total guest person must be filled</p>
+                                </span>
+                            </div> -->
+
+                            <!-- table type -->
+                            <div class="input__tag__container table__input">
+                                <div class="table__field">
+                                    <i class="fa-solid fa-users"></i>
+                                    <select class="table" name="table" id="table">
+                                        <option value="Select Table">Select Table</option>
+                                        <option value="25000">Single Table</option>
+                                        <option value="32000">Couple Table</option>
+                                        <option value="50000">Family Table</option>
+                                        <option value="120000">Party Table</option>
+                                    </select>
+                                    <div class="dropdown__arrow">
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </div>
+                                </div>
+
+                                <p class="info__text">Table type (required)</p>
+
+                                <span class="error">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    <p class="error__text">Table type must be select</p>
+                                </span>
+                            </div>
+
+                            <!-- time -->
+                            <div class="time__input__container">
+                                <span class="error">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    <p class="error__text">Reservation time must be filled</p>
+                                </span>
+
+                                <p class="info__text">Please select your preferred reservation time (required)</p>
+
+                                <div class="time__input">
+                                    <!-- morning -->
+                                    <div class="time__container">
+                                        <h3 class="time__status">Morning</h3>
+                                        <div class="time__content">
+                                            <input type="checkbox" name="morning_time_1" id="morning_time_1">
+                                            <label for="morning_time_1">9:00 am</label>
+                                        </div>
+                                        <div class="time__content">
+                                            <input type="checkbox" name="morning_time_2" id="morning_time_2">
+                                            <label for="morning_time_2">10:00 am</label>
+                                        </div>
+                                        <div class="time__content">
+                                            <input type="checkbox" name="morning_time_3" id="morning_time_3">
+                                            <label for="morning_time_3">11:00 am</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- afternoon -->
+                                    <div class="time__container">
+                                        <h3 class="time__status">Afternoon</h3>
+                                        <div class="time__content">
+                                            <input type="checkbox" name="afternoon_time_1" id="afternoon_time_1">
+                                            <label for="afternoon_time_1">12:00 pm</label>
+                                        </div>
+                                        <div class="time__content">
+                                            <input type="checkbox" name="afternoon_time_2" id="afternoon_time_2">
+                                            <label for="afternoon_time_2">1:00 pm</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- evening -->
+                                    <div class="time__container">
+                                        <h3 class="time__status">Evening</h3>
+                                        <div class="time__content">
+                                            <input type="checkbox" name="evening_time_1" id="evening_time_1">
+                                            <label for="evening_time_1">4:00 pm</label>
+                                        </div>
+                                        <div class="time__content">
+                                            <input type="checkbox" name="evening_time_2" id="evening_time_2">
+                                            <label for="evening_time_2">6:00 pm</label>
+                                        </div>
+                                        <div class="time__content">
+                                            <input type="checkbox" name="evening_time_3" id="evening_time_3">
+                                            <label for="evening_time_3">8:00 pm</label>
+                                        </div>
+                                        <div class="time__content">
+                                            <input type="checkbox" name="evening_time_4" id="evening_time_4">
+                                            <label for="evening_time_4">10:00 pm</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- user information -->
+                    <div class="reservation__info__details">
+
+                        <!-- reservation heading -->
+                        <div class="reservation__info__header">
+                            <h3 class="order__number">2</h3>
+                            <div class="reservation__info__title">
+                                <p>Add your information</p>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+
+                        <!-- user information input container -->
+                        <div class="reservation__inputs__container">
+                            <!-- username -->
+                            <div class="input__tag__container username__input">
+                                <div class="input__fields">
+                                    <i class="fa-solid fa-user"></i>
+                                    <input class="field__input" type="text" name="username" id="username"
+                                        placeholder="Enter Username">
+                                </div>
+
+                                <p class="info__text">Username (required)</p>
+
+                                <span class="error">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    <p class="error__text">Username must be filled</p>
+                                </span>
+                            </div>
+
+                            <!-- email -->
+                            <div class="input__tag__container email__input">
+                                <div class="input__fields">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <input class="field__input" type="text" name="email" id="email"
+                                        placeholder="Enter Your Email">
+                                </div>
+
+                                <p class="info__text">Email (required)</p>
+
+                                <span class="error">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    <p class="error__text">Invalid email</p>
+                                </span>
+                            </div>
+
+                            <!-- phone -->
+                            <div class="input__tag__container phone__input">
+                                <div class="input__fields">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <input class="field__input" type="number" name="phone" id="phone"
+                                        placeholder="Enter Your Phone">
+                                </div>
+
+                                <p class="info__text">
+                                    We will call you to confirm at least 24 hours prior to your reservation. <br>
+                                    Phone number must start with 09*********.
+                                </p>
+
+                                <span class="error">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    <p class="error__text">Invalid Phone Number</p>
+                                </span>
+                            </div>
+
+                            <!-- location -->
+                            <div class="input__tag__container location__input">
+                                <div class="input__fields">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <input class="field__input" type="text" name="location" id="location"
+                                        placeholder="Enter Your Location">
+                                </div>
+
+                                <p class="info__text">Location (required)</p>
+
+                                <span class="error">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    <p class="error__text">Location must be filled</p>
+                                </span>
+                            </div>
+
+                            <!-- specail request -->
+                            <div class="input__tag__container request__input">
+                                <div class="input__fields">
+                                    <i class="fa-regular fa-comment"></i>
+                                    <textarea class="request__area" name="request__box" id="request__box"
+                                        placeholder="Special Request"></textarea>
+                                </div>
+
+                                <p class="info__text">
+                                    You will be able to pre-order your meal if you want to eat as soon as you arrive at
+                                    the restaurant.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- payment information -->
+                    <div class="reservation__info__details">
+
+                        <!-- reservation heading -->
+                        <div class="reservation__info__header">
+                            <h3 class="order__number">3</h3>
+                            <div class="reservation__info__title">
+                                <p>Payment</p>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+
+                        <!-- payment method container -->
+                        <div class="reservation__inputs__container">
+                            <!-- payment -->
+                            <div class="payment__input__container">
+                                <div class="payment__input">
+
+                                    <!-- kbz pay -->
+                                    <div class="payment__container">
+                                        <div class="payment__content">
+                                            <input type="checkbox" name="payment1" id="payment1">
+                                            <label for="payment1">
+                                                <h3>kbz pay</h3>
+                                                <div class="payment__logo">
+                                                    <img src="/images/logo/kbz.webp" alt="kbz-logo">
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- wavemoney pay -->
+                                    <div class="payment__container">
+                                        <div class="payment__content">
+                                            <input type="checkbox" name="payment2" id="payment2">
+                                            <label for="payment2">
+                                                <h3>wavemoney</h3>
+                                                <div class="payment__logo">
+                                                    <img src="/images/logo/wavemoney.png" alt="wavemoney-logo">
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- ayar pay -->
+                                    <div class="payment__container">
+                                        <div class="payment__content">
+                                            <input type="checkbox" name="payment3" id="payment3">
+                                            <label for="payment3">
+                                                <h3>ayar pay</h3>
+                                                <div class="payment__logo">
+                                                    <img src="/images/logo/aya.png" alt="ayar-logo">
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="info__text">Please select your payment (required)</p>
+
+                                <span class="error">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    <p class="error__text">Payment must be filled</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- reservation button -->
+                    <div class="reserve__btn__container">
+                        <button class="button reservation__button">
+                            <p>book a table</p>
+                            <i class="fa-solid fa-utensils"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- confirmation and successful reservation -->
+            <div class="complete__reservation">
+
+                <!-- recomfirmation container -->
+                <div class="recomfirmation__container">
+                    <div class="comfirmation__card">
+                        <div class="restaurant__illustration">
+                            <img loading="lazy" src="/images/restaurant/9319826_4143721.svg" alt="illustration">
+                        </div>
+                        <h3>Are you sure to continue reservation?</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus alias praesentium
+                            distinctio aliquid exercitationem laudantium, ducimus nobis optio incidunt officiis!
+                        </p>
+                        <div class="confirmation__buttons">
+                            <button class="button continue__btn">Continue</button>
+                            <button class="button exit__btn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- completion container -->
+                <div class="completion__container">
+                    <div class="completion__card">
+                        <div class="chef__illustration">
+                            <img loading="lazy" src="/images/person/chef_illustration.png" alt="illustration">
+                        </div>
+                        <h3>Congratulations! <br> You have successfully reserved a table.</h3>
+                        <p>
+                            Please take a screenshot of the payment confirmation and show it to the restaurant when you
+                            arrive.
+                        </p>
+                        <button class="button completion__btn">Exit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer section reservation__section">
+        <div class="container footer__container">
+
+            <!-- horizontal sperated line -->
+            <hr class="line">
+
+            <!-- footer content -->
+            <div class="footer__content">
+
+                <!-- contact info -->
+                <div class="footer__first__content">
+                    <div class="contact__details__container">
+                        <div class="content__info">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="content__info__details">
+                                <h3>Address</h3>
+                                <div>
+                                    <a href="https://goo.gl/maps/obGP8GJSqDioxDDG9">
+                                        172 Bobahtoo St. <br>
+                                        Hlaing Thayar, Yangon
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content__info">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <div class="content__info__details">
+                                <h3>Phone</h3>
+                                <div>
+                                    <a href="tel:09787357071">09787357071</a>
+                                    <a href="tel:09881511244">09881511244</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content__info">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div class="content__info__details">
+                                <h3>Email</h3>
+                                <div>
+                                    <a href="mailto:kyawkhaing.kk004@gmail.com">SanCho@gmail.com</a>
+                                    <a href="mailto:kyawkhaing.kk004@gmail.com">SanCho2@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__second__content">
+                    <div class="reservation__details__container">
+                        <div class="restaurant__logo">
+                            <img src="/images/logo/Black logo - no background.svg" alt="restaurant-logo">
+                        </div>
+                        <div class="reservation__button">
+                            <h2>Reservation</h2>
+                            <button class="button reservation__btn">
+                                <a href="">
+                                    <p>book a table</p>
+                                    <i class="fa-solid fa-utensils"></i>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__third__content">
+                    <div class="social__details__container">
+                        <div class="usage__info">
+                            <h3>About</h3>
+                            <div class="about__details">
+                                <a href="#" class="usage__link">
+                                    <p>FAQ</p>
+                                </a>
+                                <a href="#" class="usage__link">
+                                    <p>Policy</p>
+                                </a>
+                                <a href="#" class="usage__link">
+                                    <p>Terms</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="usage__info">
+                            <h3>Follow ALong</h3>
+                            <div class="social__medias">
+                                <a href="https://www.facebook.com/profile.php?id=100051889950358&mibextid=ZbWKwL"
+                                    target="_blank" rel="noopener noreferrer" class="social__link">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="https://instagram.com/kyawkhaing.kk003?igshid=NTc4MTIwNjQ2YQ==" target="_blank"
+                                    rel="noopener noreferrer" class="social__link">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://t.me/Hugo123hg" target="_blank" rel="noopener noreferrer"
+                                    class="social__link">
+                                    <i class="fa-brands fa-telegram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- copyright -->
+            <div class="copyright">
+                <small>&copy; 2023 Asaki Hugo. All Rights Reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== custom javascript ===== -->
+    <script src="/javascript/user_js/script.js"></script>
+    <script src="/javascript/user_js/reservation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+[
+    {
+        "id": "01",
+        "chefImg": "/images/person/baker-7998336_1280.jpg",
+        "chefCharacter": "Masterful",
+        "chefName": "Morata Sama",
+        "chefEntranceYear": "2017",
+        "chefDetails": "Charlos, an adventurous food enthusiast, had the opportunity to experience Daichi Sakamoto's masterful creations during a visit to a prestigious restaurant in Tokyo. Charlos was enchanted by the exquisite blend of flavors, the meticulous presentation, and the harmonious balance that defined each dish. The futamono and tome-wan dishes, in particular, left a lasting impression on Charlos, who marveled at the depth of flavors and the sheer artistry encapsulated in every spoonful."
+    },
+    {
+        "id": "02",
+        "chefImg": "/images/person/brooke-cagle-WfV4KscvvBQ-unsplash.jpg",
+        "chefCharacter": "Innovative",
+        "chefName": "Asaki Gaara",
+        "chefEntranceYear": "2018",
+        "chefDetails": "Asaki Gaara, a health-conscious individual with a refined palate, sought out Daichi Sakamoto's culinary expertise in pursuit of nourishing and beautifully crafted meals. Peta discovered that Daichi's kaiseki-inspired dishes perfectly aligned with their dietary preferences. Daichi's attention to detail and use of fresh, locally sourced ingredients resonated with Asaki Gaara's values, making each dining experience a true celebration of flavors, health, and aesthetics."
+    },
+    {
+        "id": "03",
+        "chefImg": "/images/person/febrian-zakaria-SiQgni-cqFg-unsplash.jpg",
+        "chefCharacter": "Exceptional",
+        "chefName": "Jonny Pale",
+        "chefEntranceYear": "2022",
+        "chefDetails": "Jonny Pale, a self-proclaimed connoisseur of Japanese cuisine, had long been in search of an authentic and extraordinary dining experience. When Jonny Pale had the privilege of dining at Daichi Sakamoto's exclusive pop-up event, their expectations were surpassed beyond measure. Jonny Pale relished every meticulously prepared course, and the chashu, a nostalgic reminder of childhood flavors, transported them to a realm of culinary bliss. The memory of that extraordinary evening lingered in Jonny Pale mind, forever associating Daichi Sakamoto's name with excellence in Japanese gastronomy."
+    }
+]

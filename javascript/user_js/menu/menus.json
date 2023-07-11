@@ -1,0 +1,156 @@
+[
+    {
+        "id": 1,
+        "className": "dishes",
+        "menu_img": "/images/main_dish/Chicken Tikka.jpg",
+        "menu_name": "Chicken Tikka",
+        "menu_price": "12,000",
+        "menu_raw1": "Chicken",
+        "menu_raw2": "Modras",
+        "menu_raw3": "Butter",
+        "menu_details": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Esse odio harum vitae natus, nisi amet sapiente eius tempore deserunt officia!"
+    },
+    {
+        "id": 2,
+        "className": "dishes",
+        "menu_img": "/images/main_dish/Confit de Canard.jpg",
+        "menu_name": "Confit de Canard",
+        "menu_price": "18,500",
+        "menu_raw1": "Duck",
+        "menu_raw2": "Thyme",
+        "menu_raw3": "Black pepper",
+        "menu_details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio harum vitae natus, nisi amet sapiente eius tempore deserunt officia!"
+    },
+    {
+        "id": 3,
+        "className": "dishes",
+        "menu_img": "/images/main_dish/Moussaka.jpg",
+        "menu_name": "Moussaka",
+        "menu_price": "15,500",
+        "menu_raw1": "Red wine",
+        "menu_raw2": "Lamb mince",
+        "menu_raw3": "Potatoes",
+        "menu_details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio harum vitae natus, nisi amet sapiente eius tempore deserunt officia!"
+    },
+    {
+        "id": 4,
+        "className": "desserts",
+        "menu_img": "/images/dessert/cake1.jpg",
+        "menu_name": "Chocolate cake",
+        "menu_price": "5500",
+        "menu_raw1": "Chocolate",
+        "menu_raw2": "Flour",
+        "menu_raw3": "Eggs",
+        "menu_details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio harum vitae natus, nisi amet sapiente eius tempore deserunt officia!"
+    },
+    {
+        "id": 5,
+        "className": "drinks",
+        "menu_img": "/images/drink/Champagne.jpg",
+        "menu_name": "Champagne",
+        "menu_price": "19,000",
+        "menu_raw1": "Pinot",
+        "menu_raw2": "Meunier",
+        "menu_raw3": "Chardonnay, white",
+        "menu_details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio harum vitae natus, nisi amet sapiente eius tempore deserunt officia!"
+    },
+    {
+        "id": 6,
+        "className": "dishes",
+        "menu_img": "/images/main_dish/Paella-2.jpg",
+        "menu_name": "Paella",
+        "menu_price": "15,500",
+        "menu_raw1": "Chicken",
+        "menu_raw2": "Rice",
+        "menu_raw3": "Vegetables",
+        "menu_details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio harum vitae natus, nisi amet sapiente eius tempore deserunt officia!"
+    },
+    {
+        "id": 7,
+        "className": "drinks",
+        "menu_img": "/images/drink/Milkshake.jpg",
+        "menu_name": "Milkshake",
+        "menu_price": "4500",
+        "menu_raw1": "Chocolate",
+        "menu_raw2": "Ice",
+        "menu_raw3": "Cream",
+        "menu_details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio harum vitae natus, nisi amet sapiente eius tempore deserunt officia!"
+    },
+    {
+        "id": 8,
+        "className": "dishes",
+        "menu_img": "/images/main_dish/Samosa thoke.jpg",
+        "menu_name": "Samosar thoke",
+        "menu_price": "5500",
+        "menu_raw1": "Samosar",
+        "menu_raw2": "Vegetable",
+        "menu_raw3": "Sauce",
+        "menu_details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio harum vitae natus, nisi amet sapiente eius tempore deserunt officia!"
+    },
+    {
+        "id": 9,
+        "className": "dishes",
+        "menu_img": "/images/main_dish/Pizza.jpg",
+        "menu_name": "Pizza",
+        "menu_price": "8,500",
+        "menu_raw1": "Black tea powder",
+        "menu_raw2": "Pizza dough",
+        "menu_raw3": "Cheese",
+        "menu_details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio harum vitae natus, nisi amet sapiente eius tempore deserunt officia!"
+    },
+    {
+        "id": 10,
+        "className": "desserts",
+        "menu_img": "/images/dessert/ice-cream1.jpg",
+        "menu_name": "Chocolate ice-cream",
+        "menu_price": "3,500",
+        "menu_raw1": "Ice-cream",
+        "menu_raw2": "Chocolate",
+        "menu_raw3": "Waffle",
+        "menu_details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio harum vitae natus, nisi amet sapiente eius tempore deserunt officia!"
+    },
+    {
+        "id": 11,
+        "className": "dishes",
+        "menu_img": "/images/main_dish/Paella-1.jpg",
+        "menu_name": "Seafood paella",
+        "menu_price": "19,500",
+        "menu_raw1": "Seafood",
+        "menu_raw2": "Rice",
+        "menu_raw3": "Vegetables",
+        "menu_details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio harum vitae natus, nisi amet sapiente eius tempore deserunt officia!"
+    },
+    {
+        "id": 12,
+        "className": "drinks",
+        "menu_img": "/images/drink/Mango lassi.jpg",
+        "menu_name": "Mango lassi",
+        "menu_price": "5,000",
+        "menu_raw1": "Mango",
+        "menu_raw2": "Yogurt",
+        "menu_raw3": "Cream",
+        "menu_details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio harum vitae natus, nisi amet sapiente eius tempore deserunt officia!"
+    },
+    {
+        "id": 13,
+        "className": "desserts",
+        "menu_img": "/images/dessert/cookie1.jpg",
+        "menu_name": "Cookie",
+        "menu_price": "4,500",
+        "menu_raw1": "Milk chips",
+        "menu_raw2": "butter",
+        "menu_raw3": "cinnamon",
+        "menu_details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio harum vitae natus, nisi amet sapiente eius tempore deserunt officia!"
+    },
+    {
+        "id": 14,
+        "className": "drinks",
+        "menu_img": "/images/drink/Tequila.jpg",
+        "menu_name": "Tequila",
+        "menu_price": "48,500",
+        "menu_raw1": "Distilled agave",
+        "menu_raw2": "Sugar",
+        "menu_raw3": "Additives ",
+        "menu_details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio harum vitae natus, nisi amet sapiente eius tempore deserunt officia!"
+    }
+]

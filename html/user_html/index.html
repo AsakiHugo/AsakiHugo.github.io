@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ===== about website info ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SanCho Online Restaurant Reservation System" />
+    <meta name="keywords" content="SanCho Restaurant, Online Restaurant Reservation, Online Table Booking" />
+    <meta name="author" content="Kyaw Khaing" />
+    <meta name="contact" content="kyawkhaing.kk004@gmail.com" />
+
+    <!-- ===== website title with icon ===== -->
+    <link rel="Icon" type="svg" href="/images/logo/Tab_Logo.svg">
+    <title>SanCho Restaurant</title>
+
+    <!-- ===== custom css ===== -->
+    <link rel="stylesheet" href="/css/reusable.css">
+    <link rel="stylesheet" href="/css/user_css/style.css">
+    <link rel="stylesheet" href="/css/user_css/media.css">
+
+    <!-- ===== fontawesome cdn ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ===== swiper cdn ===== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <header class="header section">
+
+        <!-- navigation -->
+        <nav class="nav container">
+            <div class="nav__left">
+
+                <!-- restaurant logo -->
+                <div class="restaurant__logo">
+                    <img loading="lazy" src="/images/logo/Black logo - no background.svg" alt="restaurant-logo">
+                </div>
+
+                <!-- nav lists -->
+                <ul class="nav__lists">
+                    <li class="nav__list">
+                        <a href="#home" class="nav__link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav__list">
+                        <a href="#menu" class="nav__link">
+                            Menu
+                        </a>
+                    </li>
+                    <li class="nav__list">
+                        <a href="#chef" class="nav__link">
+                            Chef
+                        </a>
+                    </li>
+                    <li class="nav__list">
+                        <a href="#location" class="nav__link">
+                            Location
+                        </a>
+                    </li>
+                    <li class="nav__list">
+                        <a href="reservation.html" class="nav__link">
+                            Reservation
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__right">
+                <!-- social lists -->
+                <ul class="social__lists">
+                    <li class="social__list">
+                        <a href="https://www.facebook.com/profile.php?id=100051889950358&mibextid=ZbWKwL"
+                            target="_blank" rel="noopener noreferrer" class="social__link">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="social__list">
+                        <a href="https://instagram.com/kyawkhaing.kk003?igshid=NTc4MTIwNjQ2YQ==" target="_blank"
+                            rel="noopener noreferrer" class="social__link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="social__list">
+                        <a href="https://t.me/Hugo123hg" target="_blank" rel="noopener noreferrer" class="social__link">
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- theme toggler -->
+                <div class="theme__toggler">
+                    <label>
+                        <input class="toggle-checkbox" type="checkbox">
+                        <div class="toggle-slot">
+                            <div class="toggle-button"></div>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- profile -->
+                <a href="profile.html" class="profile">
+                    <div class="profile__img">
+                        <img src="/images/person/warren-uuVguyksViA-unsplash.jpg" class="profile__img"
+                            alt="profile-img">
+                    </div>
+                    <p class="profile__username">
+                        Eaint Amara Thiri
+                    </p>
+                </a>
+
+                <!-- side-bar toggler -->
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars active__side"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+            <div class="overlay"></div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section">
+            <div class="container home__container">
+                <div class="hero__img">
+                    <img loading="lazy" src="/images/restaurant/klara-kulikova-yjQDnOhGE34-unsplash.jpg"
+                        alt="restaurant-img">
+                </div>
+
+                <div class="hero__content">
+                    <!-- restaurant opening time and day -->
+                    <div class="restaurant__timeDay">
+                        <h2 class="restaurant__time">
+                            <span>09:00</span>
+                            AM to
+                            <span>10:00</span>
+                            PM
+                        </h2>
+                        <div class="restaurant__day">
+                            <div class="line"></div>
+                            <h2>Every Day</h2>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+
+                    <!-- hero text -->
+                    <h1 class="hero__text">
+                        Savor Unforgettable Moments <br><span>with</span> Delicious Cuisine
+                    </h1>
+
+                    <!-- reservation button -->
+                    <button class="button reservation__btn">
+                        <a href="reservation.html">
+                            <p>book a table</p>
+                            <i class="fa-solid fa-utensils"></i>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="section">
+            <div class="container menu__container">
+
+                <!-- showcase -->
+                <div class="showcase__menu">
+
+                    <!-- showcase card slider -->
+                    <div class="swiper menu__card__container">
+                        <div class="swiper-wrapper menu__cards">
+                            <div class="menu_card swiper-slide">
+                                <div class="menu__img">
+                                    <img loading="lazy" src="/images/main_dish/Paella-1.jpg" alt="menu-img">
+                                </div>
+                                <p class="menu__name">
+                                    Paella
+                                </p>
+                            </div>
+                            <div class="menu_card swiper-slide">
+                                <div class="menu__img">
+                                    <img loading="lazy" src="/images/main_dish/Chicken Tikka.jpg" alt="menu-img">
+                                </div>
+                                <p class="menu__name">
+                                    Chicken Tikka
+                                </p>
+                            </div>
+                            <div class="menu_card swiper-slide">
+                                <div class="menu__img">
+                                    <img loading="lazy" src="/images/main_dish/Moussaka.jpg" alt="menu-img">
+                                </div>
+                                <p class="menu__name">
+                                    Moussaka
+                                </p>
+                            </div>
+                            <div class="menu_card swiper-slide">
+                                <div class="menu__img">
+                                    <img loading="lazy" src="/images/drink/Champagne.jpg" alt="drink-img">
+                                </div>
+                                <p class="menu__name">
+                                    Champagne
+                                </p>
+                            </div>
+                            <div class="menu_card swiper-slide">
+                                <div class="menu__img">
+                                    <img loading="lazy" src="/images/main_dish/Pizza.jpg" alt="menu-img">
+                                </div>
+                                <p class="menu__name">
+                                    Pizza
+                                </p>
+                            </div>
+                            <div class="menu_card swiper-slide">
+                                <div class="menu__img">
+                                    <img loading="lazy" src="/images/main_dish/Samosa thoke.jpg" alt="menu-img">
+                                </div>
+                                <p class="menu__name">
+                                    Samosa thoke
+                                </p>
+                            </div>
+                            <div class="menu_card swiper-slide">
+                                <div class="menu__img">
+                                    <img loading="lazy" src="/images/drink/Mango lassi.jpg" alt="drink-img">
+                                </div>
+                                <p class="menu__name">
+                                    Mango lassi
+                                </p>
+                            </div>
+                            <div class="menu_card swiper-slide">
+                                <div class="menu__img">
+                                    <img loading="lazy" src="/images/drink/Tequila.jpg" alt="drink-img">
+                                </div>
+                                <p class="menu__name">
+                                    Tequila
+                                </p>
+                            </div>
+                            <div class="menu_card swiper-slide">
+                                <div class="menu__img">
+                                    <img loading="lazy" src="/images/drink/whisky.jpg" alt="drink-img">
+                                </div>
+                                <p class="menu__name">
+                                    Pizza
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <!-- view more button -->
+                    <button class="view__more__btn button">
+                        <a href="menu.html">
+                            <p>view more</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </button>
+                </div>
+
+                <!-- special menu -->
+                <div class="special__menu">
+                    <div class="small__img__container">
+                        <div class="special__small__img">
+                            <img src="/images/main_dish/special.jpg" alt="specail-menu">
+                        </div>
+                    </div>
+
+                    <p class="specail__menu__details">
+                        Savor the extraordinary taste of our beef steak - a culinary masterpiece that tantalizes
+                        your senses. Melt-in-your-mouth tenderness, a savory caramelized crust, and expert seasoning
+                        create a symphony of flavors that will leave you craving for more. Indulge in the ultimate
+                        culinary experience and discover the richness of our premium beef steak.
+                    </p>
+
+                    <div class="special__menu__materials">
+                        <h2>Beef</h2>
+                        <h2>Sauce</h2>
+                        <h2>Vegetable</h2>
+                    </div>
+
+                    <div class="large__img__container">
+                        <div class="specail__large__img">
+                            <img src="/images/main_dish/special.jpg" alt="specail-menu">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="chef" class="section">
+            <div class="container chef__conatiner">
+                <div class="chef__card__container">
+                    <div class="chef__cards swiper">
+                        <div class="swiper-wrapper">
+                            <div class="chef__card swiper-slide">
+                                <div class="left__side">
+                                    <div class="chef__img">
+                                        <img loading="lazy"
+                                            src="/images/person/febrian-zakaria-SiQgni-cqFg-unsplash.jpg"
+                                            alt="chef-img">
+                                    </div>
+                                </div>
+                                <div class="right__side">
+                                    <div class="chef__info">
+                                        <h1 class="chef__name">Charlos Pale</h1>
+
+                                        <!-- chef info details -->
+                                        <p class="chef__details">
+                                            Charlos, an adventurous food enthusiast, had the opportunity to experience
+                                            Daichi
+                                            Sakamoto's masterful creations during a visit to a prestigious restaurant in
+                                            Tokyo.
+                                            Charlos was enchanted by the exquisite blend of flavors, the meticulous
+                                            presentation,
+                                            and the harmonious balance that defined each dish. The futamono and tome-wan
+                                            dishes,
+                                            in
+                                            particular, left a lasting impression on Charlos, who marveled at the depth
+                                            of
+                                            flavors
+                                            and the sheer artistry encapsulated in every spoonful.
+                                        </p>
+
+                                        <!-- next and prev buttons -->
+                                        <div class="toggle__buttons">
+                                            <div class="pre__button">
+                                                <i class="fa-solid fa-chevron-left"></i>
+                                            </div>
+                                            <div class="next__button">
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chef__card swiper-slide">
+                                <div class="left__side">
+                                    <div class="chef__img">
+                                        <img loading="lazy" src="/images/person/baker-7998336_1280.jpg" alt="chef-img">
+                                    </div>
+                                </div>
+                                <div class="right__side">
+                                    <div class="chef__info">
+                                        <h1 class="chef__name">Asaki Gaara</h1>
+
+                                        <!-- chef info details -->
+                                        <p class="chef__details">
+                                            Asaki Gaara, a health-conscious individual with a refined palate, sought out
+                                            Daichi Sakamoto's culinary expertise in pursuit of nourishing and
+                                            beautifully crafted meals. Peta discovered that Daichi's kaiseki-inspired
+                                            dishes perfectly aligned with their dietary preferences. Daichi's attention
+                                            to detail and use of fresh, locally sourced ingredients resonated with Asaki
+                                            Gaara's values, making each dining experience a true celebration of flavors,
+                                            health, and aesthetics.
+                                        </p>
+
+                                        <!-- next and prev buttons -->
+                                        <div class="toggle__buttons">
+                                            <div class="pre__button">
+                                                <i class="fa-solid fa-chevron-left"></i>
+                                            </div>
+                                            <div class="next__button">
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chef__card swiper-slide">
+                                <div class="left__side">
+                                    <div class="chef__img">
+                                        <img loading="lazy" src="/images/person/brooke-cagle-WfV4KscvvBQ-unsplash.jpg"
+                                            alt="chef-img">
+                                    </div>
+                                </div>
+                                <div class="right__side">
+                                    <div class="chef__info">
+                                        <h1 class="chef__name">Jonny Pale</h1>
+
+                                        <!-- chef info details -->
+                                        <p class="chef__details">
+                                            Jonny Pale, a self-proclaimed connoisseur of Japanese cuisine, had long been
+                                            in search of an authentic and extraordinary dining experience. When Jonny
+                                            Pale had the privilege of dining at Daichi Sakamoto's exclusive pop-up
+                                            event, their expectations were surpassed beyond measure. Jonny Pale relished
+                                            every meticulously prepared course, and the chashu, a nostalgic reminder of
+                                            childhood flavors, transported them to a realm of culinary bliss. The memory
+                                            of that extraordinary evening lingered in Jonny Pale mind, forever
+                                            associating Daichi Sakamoto's name with excellence in Japanese gastronomy.
+                                        </p>
+
+                                        <!-- next and prev buttons -->
+                                        <div class="toggle__buttons">
+                                            <div class="pre__button">
+                                                <i class="fa-solid fa-chevron-left"></i>
+                                            </div>
+                                            <div class="next__button">
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section">
+            <div class="container table__container">
+                <article class="text__effect__container">
+                    <h1 class="text">Single Table (25,000 Ks)</h1>
+                    <img src="/images/restaurant/Bee.jpg" alt="table-img" class="img__effect">
+                    <div class="moving__text__container">
+                        <div class="moving__text">
+                            <span>Refreshing</span>
+                            <span>Refreshing</span>
+                            <span>Refreshing</span>
+                            <span>Refreshing</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="text__effect__container">
+                    <h1 class="text">Couple Table (32,000 Ks)</h1>
+                    <img src="/images/restaurant/albert-YYZU0Lo1uXE-unsplash.jpg" alt="table-img" class="img__effect">
+                    <div class="moving__text__container">
+                        <div class="moving__text">
+                            <span>Reduce Depression</span>
+                            <span>Reduce Depression</span>
+                            <span>Reduce Depression</span>
+                            <span>Reduce Depression</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="text__effect__container">
+                    <h1 class="text">Family Table (50,000 Ks)</h1>
+                    <img src="/images/restaurant/Cafe.jpg" alt="table-img" class="img__effect">
+                    <div class="moving__text__container">
+                        <div class="moving__text">
+                            <span>Relaxing</span>
+                            <span>Relaxing</span>
+                            <span>Relaxing</span>
+                            <span>Relaxing</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="text__effect__container">
+                    <h1 class="text">Party Table (120,000 Ks)</h1>
+                    <img src="/images/restaurant/Bar.jpg" alt="table-img" class="img__effect">
+                    <div class="moving__text__container">
+                        <div class="moving__text">
+                            <span>Peace</span>
+                            <span>Peace</span>
+                            <span>Peace</span>
+                            <span>Peace</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <section id="location" class="section">
+            <div class="container location__container">
+                <div class="google__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15271.696453546305!2d96.06349411212469!3d16.87964809160757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c19586ea186adb%3A0xd964944f69abc2d0!2z4YGFIOGAkeGAreGAleGAuiDhgIDhgKzhgLjhgJnhgL7hgJDhgLrhgJDhgK3hgK_hgIThgLo!5e0!3m2!1sen!2smm!4v1687575931036!5m2!1sen!2smm"
+                        style="border:0;" allowfullscreen="true" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- scroll to home -->
+        <a class="scroll__up" href="#home">
+            <span class="zoomIn"></span>
+            <i class="fa-solid fa-circle-chevron-up"></i>
+        </a>
+    </main>
+
+    <footer class="footer section">
+        <div class="container footer__container">
+
+            <!-- subscrition -->
+            <div class="subscribe__container">
+                <h2 class="subscribe__content">
+                    Subscribe to my page for the <span>latest</span> updates
+                    and exclusive content.
+                </h2>
+                <div class="subscribe__input">
+                    <div class="subscribe__field">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" name="subscribe_email" id="subscibe_email" placeholder="Enter Your Email">
+                    </div>
+                    <button class="button subscribe__btn">
+                        <p>subscribe</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- horizontal sperated line -->
+            <hr class="line">
+
+            <!-- footer content -->
+            <div class="footer__content">
+
+                <!-- contact info -->
+                <div class="footer__first__content">
+                    <div class="contact__details__container">
+                        <div class="content__info">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="content__info__details">
+                                <h3>Address</h3>
+                                <div>
+                                    <a href="https://goo.gl/maps/obGP8GJSqDioxDDG9">
+                                        172 Bobahtoo St. <br>
+                                        Hlaing Thayar, Yangon
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content__info">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <div class="content__info__details">
+                                <h3>Phone</h3>
+                                <div>
+                                    <a href="tel:09787357071">09787357071</a>
+                                    <a href="tel:09881511244">09881511244</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content__info">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div class="content__info__details">
+                                <h3>Email</h3>
+                                <div>
+                                    <a href="mailto:kyawkhaing.kk004@gmail.com">SanCho@gmail.com</a>
+                                    <a href="mailto:kyawkhaing.kk004@gmail.com">SanCho2@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__second__content">
+                    <div class="reservation__details__container">
+                        <div class="restaurant__logo">
+                            <img src="/images/logo/Black logo - no background.svg" alt="restaurant-logo">
+                        </div>
+                        <div class="reservation__button">
+                            <h2>Reservation</h2>
+                            <button class="button reservation__btn">
+                                <a href="reservation.html">
+                                    <p>book a table</p>
+                                    <i class="fa-solid fa-utensils"></i>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__third__content">
+                    <div class="social__details__container">
+                        <div class="usage__info">
+                            <h3>About</h3>
+                            <div class="about__details">
+                                <a href="#" class="usage__link">
+                                    <p>FAQ</p>
+                                </a>
+                                <a href="#" class="usage__link">
+                                    <p>Policy</p>
+                                </a>
+                                <a href="#" class="usage__link">
+                                    <p>Terms</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="usage__info">
+                            <h3>Follow ALong</h3>
+                            <div class="social__medias">
+                                <a href="https://www.facebook.com/profile.php?id=100051889950358&mibextid=ZbWKwL"
+                                    target="_blank" rel="noopener noreferrer" class="social__link">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="https://instagram.com/kyawkhaing.kk003?igshid=NTc4MTIwNjQ2YQ==" target="_blank"
+                                    rel="noopener noreferrer" class="social__link">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://t.me/Hugo123hg" target="_blank" rel="noopener noreferrer"
+                                    class="social__link">
+                                    <i class="fa-brands fa-telegram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- copyright -->
+            <div class="copyright">
+                <small>&copy; 2023 Asaki Hugo. All Rights Reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== custom javascript ===== -->
+    <script src="/javascript/user_js/script.js"></script>
+
+    <!-- ===== swiper javascript ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".menu__card__container", {
+            slidesPerView: getSlidesPerView(),
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+                clickable: true,
+            },
+        });
+
+        var swiper2 = new Swiper(".chef__cards", {
+            navigation: {
+                nextEl: ".next__button",
+                prevEl: ".pre__button",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+                clickable: true,
+            },
+        });
+
+        // Event listener for window resize
+        window.addEventListener("resize", function () {
+            swiper.params.slidesPerView = getSlidesPerView();
+            swiper.update();
+        });
+
+        // Helper function to determine the number of slides per view based on screen size
+        function getSlidesPerView() {
+            var screenWidth = window.innerWidth;
+            if (screenWidth < 1024) {
+                if (screenWidth < 768) {
+                    if (screenWidth < 582) {
+                        if (screenWidth < 362) {
+                            return 1;
+                        }
+                        else {
+                            return 2;
+                        }
+                    }
+                    else {
+                        return 3;
+                    }
+                } else {
+                    return 4;
+                }
+            } else {
+                return 5;
+            }
+        }
+    </script>
+</body>
+
+</html>

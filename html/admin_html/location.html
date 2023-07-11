@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ===== about website info ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SanCho Online Restaurant Reservation System(Admin)" />
+    <meta name="keywords"
+        content="SanCho Restaurant, Online Restaurant Reservation, Online Table Booking, Admin Dashboard, Restaurant location" />
+    <meta name="author" content="Kyaw Khaing" />
+    <meta name="contact" content="kyawkhaing.kk004@gmail.com" />
+
+    <!-- ===== website title with icon ===== -->
+    <link rel="Icon" type="svg" href="/images/logo/Tab_Logo.svg">
+    <title>SanCho Admin Dashboard</title>
+
+    <!-- ===== custom css ===== -->
+    <link rel="stylesheet" href="/css/reusable.css">
+    <link rel="stylesheet" href="/css/admin_css/style.css">
+    <link rel="stylesheet" href="/css/admin_css/media.css">
+
+    <!-- ===== fontawesome cdn ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <div class="section">
+        <div class="container dashboard">
+
+            <!-- sidebar -->
+            <aside class="sidebar__container">
+                <!-- close-btn -->
+                <div class="sidebar__closeBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+                <!-- sidebar profile -->
+                <div class="profile__content">
+                    <a href="profile.html" class="profile__img">
+                        <img loading="lazy" src="/images/person/warren-uuVguyksViA-unsplash.jpg" alt="profile-img">
+                    </a>
+                    <p class="person__name">Amara Thiri Phone Myat</p>
+                </div>
+
+                <!-- sidebar content -->
+                <nav class="nav">
+                    <ul>
+                        <li class="nav__list">
+                            <a href="index.html">
+                                <i class="fa-solid fa-house"></i>
+                                <div class="link__name">Dashboard</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="reservation.html">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <div class="link__name">Reservation</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="table.html">
+                                <i class="fa-solid fa-chair"></i>
+                                <div class="link__name">Tables</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="menu.html">
+                                <i class="fa-solid fa-utensils"></i>
+                                <div class="link__name">Menus</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="chef.html">
+                                <i class="fa-solid fa-user"></i>
+                                <div class="link__name">Chef</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="link__name">Location & Contact</div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- logout -->
+                <div class="aside__footer">
+                    <div class="profile__logout">
+                        <a href="/html/user_html/entrance/login.html">
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                            <div class="logout__name">Sign Out</div>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- dashboard container -->
+            <main>
+                <div class="dashboard__content__container">
+
+                    <!-- header -->
+                    <header class="header">
+
+                        <!-- navigation -->
+                        <nav class="nav">
+                            <i class="fa-solid fa-bars"></i>
+
+                            <!-- restaurant logo -->
+                            <div class="restaurant__logo">
+                                <img src="/images/logo/Black logo - no background.svg" alt="restaurant-logo">
+                            </div>
+
+                            <!-- theme toggler -->
+                            <div class="theme__toggler">
+                                <label>
+                                    <input class="toggle-checkbox" type="checkbox">
+                                    <div class="toggle-slot">
+                                        <div class="toggle-button"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </nav>
+                    </header>
+
+                    <!-- location container -->
+                    <section class="location__section">
+                        <div class="location__container">
+
+                            <div class="location__card">
+                                <!-- map -->
+                                <div class="map__container">
+                                    <div class="map">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.9893694684483!2d96.0665147371246!3d16.876420410774244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1be3059b6950d%3A0xd6800d4f4a9cec42!2sHlaingthaya%20Township%2C%20Yangon!5e0!3m2!1sen!2smm!4v1686385502704!5m2!1sen!2smm"
+                                            allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade">
+                                        </iframe>
+                                    </div>
+                                </div>
+
+                                <!-- contact info details -->
+                                <div class="contact__info__container">
+
+                                    <div class="contact__info">
+                                        <p class="title">Address</p>
+                                        <div class="contact__details">
+                                            <p class="address">
+                                                172 Bobahtoo St.
+                                                Hlaing Thayar, Yangon
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact__info">
+                                        <p class="title">Phone</p>
+                                        <div class="contact__details">
+                                            <p class="phone1">+9 78 735 7071</p>
+                                            <p class="phone2">+9 79 573 7071</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact__info">
+                                        <p class="title">Email</p>
+                                        <div class="contact__details">
+                                            <p class="email">
+                                                SanCho1@gmail.com
+                                            </p>
+                                            <p class="email">
+                                                SanCho2@gmail.com
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- edit btn -->
+                                    <button class="editBtn">
+                                        <i class="fa-solid fa-gear"></i>
+                                        <p>Edit</p>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- editVersion -->
+                            <div class="edit__version__container">
+                                <div class="edit__location">
+                                    <!-- location edit -->
+                                    <form action="" method="post">
+                                        <!-- close edit location -->
+                                        <i class="fa-solid fa-xmark"></i>
+
+                                        <!-- image input -->
+                                        <div class="img__input">
+                                            <div class="location__image">
+                                                <img src="/images/person/upload-img.jpg" alt="location-img">
+                                            </div>
+                                            <input type="url" name="map_image" id="map_image">
+                                            <label for="map_image">
+                                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                                <p>Upload url</p>
+                                            </label>
+                                        </div>
+
+                                        <!-- text input -->
+                                        <div class="edit__inputs__container">
+
+                                            <div class="input__field">
+                                                <p>address</p>
+                                                <input type="text" name="location_address" id="location_address">
+                                            </div>
+                                            <div class="input__field">
+                                                <p>phone</p>
+                                                <input type="text" name="location_phone" id="location_phone">
+                                            </div>
+                                            <div class="input__field">
+                                                <p>email</p>
+                                                <input type="text" name="location_email" id="location_email">
+                                            </div>
+
+                                        </div>
+
+                                        <!-- submit button -->
+                                        <div class="submitBtn">
+                                            <button type="submit">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- custom js -->
+    <script src="/javascript/admin_js/script.js"></script>
+
+</body>
+
+</html>

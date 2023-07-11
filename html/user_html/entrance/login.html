@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ===== about website info ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SanCho Restaurant's Login Form" />
+    <meta name="keywords" content="SanCho Restaurant, Login Form" />
+    <meta name="author" content="Kyaw Khaing" />
+    <meta name="contact" content="kyawkhaing.kk004@gmail.com" />
+
+    <!-- ===== website title with icon ===== -->
+    <link rel="Icon" type="svg" href="/images/logo/Tab_Logo.svg">
+    <title>SanCho Restaurant</title>
+
+    <!-- ===== custom css ===== -->
+    <link rel="stylesheet" href="/css/reusable.css">
+    <link rel="stylesheet" href="/css/user_css/style.css">
+    <link rel="stylesheet" href="/css/user_css/media.css">
+
+    <!-- ===== fontawesome cdn ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <!-- login -->
+    <main class="login__section section">
+        <div class="container">
+
+            <!-- container left side -->
+            <div class="left__side">
+                <div class="login__container">
+                    <div class="restaurant__logo">
+                        <img loading="lazy" src="/images/logo/Black logo - no background.svg" alt="restaurant-logo">
+                    </div>
+
+                    <!-- login form -->
+                    <form class="login__form" action="../index.html" method="post">
+
+                        <p>Email : kk@gmail.com</p>
+                        <p>UserPassword : 12345Kk@</p>
+                        <p>AdminPassword : 54321Kk@</p>
+
+                        <h2>Login</h2>
+
+                        <!-- email -->
+                        <div class="input__field__container emailField">
+                            <div class="input__field">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input class="input__tag" type="text" name="email" id="email" placeholder="Email">
+                            </div>
+
+                            <span class="error">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <p class="error__text">Please enter a valid email</p>
+                            </span>
+                        </div>
+
+                        <!-- password -->
+                        <div class="input__field__container passwordField">
+                            <div class="input__field">
+                                <i class="fa-solid fa-lock"></i>
+                                <input class="input__tag" type="password" name="password" id="password"
+                                    placeholder="Password">
+
+                                <div class="toggle__password">
+                                    <i class="fa-solid fa-eye-slash"></i>
+                                </div>
+                            </div>
+
+                            <span class="error">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <p class="error__text">
+                                    Incorrect Password!
+                                </p>
+                            </span>
+                        </div>
+
+                        <button type="submit" class="button login__btn">Login</button>
+
+                        <p class="to__login">
+                            Don't you have an account?
+                            <a href="signup.html">SignUp</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- container right side -->
+            <div class="right__side">
+                <img loading="lazy" src="/images/restaurant/marika-pamp-4c7H6AjzxqE-unsplash.jpg" alt="restaurant-img">
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== custom javascript ===== -->
+    <script src="/javascript/user_js/entrance/login.js"></script>
+</body>
+
+</html>

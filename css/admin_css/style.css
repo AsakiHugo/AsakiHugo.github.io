@@ -1,0 +1,1377 @@
+.dashboard {
+  position: relative;
+  width: 100%;
+}
+
+/* side bar */
+.dashboard .sidebar__container {
+  position: fixed;
+  left: 0;
+  width: 6rem;
+  max-width: 10rem;
+  height: 100%;
+  box-shadow: 8px 0px 8px -8px rgba(31, 38, 135, 0.37);
+  background-color: var(--white-color);
+  z-index: var(--z-fixed);
+  transition: all 300ms ease;
+}
+
+.darkTheme .dashboard .sidebar__container {
+  background-color: var(--background-color);
+}
+
+.dashboard .sidebar__container.sidebar__active {
+  width: 16rem;
+  max-width: 20rem;
+}
+
+.sidebar__container .sidebar__closeBtn {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  color: var(--white-color);
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.darkTheme .sidebar__container .sidebar__closeBtn {
+  color: var(--background-color);
+}
+
+
+.sidebar__container .sidebar__closeBtn.sidebar__active {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.sidebar__closeBtn i {
+  font-size: var(--h2-font-size);
+  color: var(--input-color);
+}
+
+.sidebar__container .profile__content {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 0.65rem;
+  padding-top: 1rem;
+  box-shadow: 0px 10px 10px -8px hsla(0, 0%, 0%, 0.1);
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  transition: all 300ms ease;
+}
+
+.darkTheme .sidebar__container .profile__content {
+  color: var(--background-color);
+}
+
+.profile__content .profile__img {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 1.5px solid hsl(212, 12%, 72%);
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.profile__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+
+.profile__content .person__name {
+  opacity: 0;
+  display: none;
+  font-size: var(--small-font-size);
+}
+
+.sidebar__active .profile__content .person__name {
+  opacity: 1;
+  display: block;
+}
+
+nav ul .nav__list {
+  width: 100%;
+  margin-block: 1rem;
+  padding-inline: 2rem;
+}
+
+nav ul .nav__list a,
+.profile__logout a {
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+  padding-block: 0.5rem;
+  color: var(--primary-lt-color);
+  transition: all 300ms ease;
+}
+
+.darkTheme .profile__logout a {
+  color: var(--background-color);
+}
+
+nav ul .nav__list a {
+  border-bottom: 1.5px dotted var(--scroll-thumb-color);
+}
+
+.nav__list a i {
+  color: hsla(190, 64%, 22%, 0.85);
+  font-size: var(--h3-font-size);
+}
+
+.darkTheme .nav__list a i {
+  color: var(--primary-lt-color);
+}
+
+
+.nav__list a .link__name {
+  display: none;
+  font-size: var(--small-font-size);
+}
+
+.sidebar__active .nav__list a .link__name {
+  display: block;
+}
+
+.nav ul .nav__list.sidebar__active a,
+.nav ul .nav__list:hover a {
+  color: var(--primary-color);
+  transform: translateX(-0.5rem);
+  border-bottom: 1.5px solid var(--primary-color);
+}
+
+.nav ul .nav__list.sidebar__active a i,
+.nav ul .nav__list:hover a i {
+  color: var(--primary-color);
+}
+
+.sidebar__active .nav .nav__list.sidebar__active a,
+.sidebar__active .nav .nav__list:hover a {
+  transform: translateX(-1rem);
+}
+
+.aside__footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0px -10px 10px -8px hsla(0, 0%, 0%, 0.1);
+  background-color: var(--primary-color);
+}
+
+.profile__logout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-block: 1rem;
+}
+
+.profile__logout a {
+  color: var(--white-color);
+}
+
+.profile__logout a i {
+  font-size: var(--h3-font-size);
+}
+
+.profile__logout a .logout__name {
+  display: none;
+  font-size: var(--smaller-font-size);
+}
+
+.sidebar__active .profile__logout a .logout__name {
+  display: block;
+}
+
+.profile__logout a:hover {
+  color: var(--background-color);
+}
+
+.profile__logout a:hover .logout__name {
+  text-decoration: underline;
+}
+
+/* dashboard container */
+.dashboard main .dashboard__content__container {
+  position: relative;
+  width: calc(100% - 6rem);
+  left: 6rem;
+}
+
+.dashboard main .dashboard__content__container.sidebar__active {
+  width: calc(100% - 16rem);
+  left: 16rem;
+}
+
+/* header */
+.dashboard__content__container .header {
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+
+.header .nav {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2.5rem;
+  background-color: var(--white-color);
+  z-index: var(--z-fixed);
+  transition: box-shadow 250ms ease-out;
+}
+
+.darkTheme .header .nav {
+  background-color: var(--black-color);
+}
+
+.header .nav.active__header {
+  box-shadow: var(--shadow-base);
+}
+
+.header .nav i {
+  font-size: var(--h2-font-size);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.darkTheme .header .nav i {
+  color: var(--primary-color);
+}
+
+.header .nav i.sidebar__active {
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+}
+
+.restaurant__logo {
+  width: 10rem;
+  display: grid;
+  place-items: center;
+}
+
+.theme__toggler .toggle-checkbox {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.theme__toggler .toggle-slot {
+  position: relative;
+  width: 4.5rem;
+  height: 2.15rem;
+  font-size: 10px;
+  border-radius: 10rem;
+  background-color: #ecf1f4;
+  transition: background-color 250ms;
+  cursor: pointer;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.25),
+    0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.darkTheme .theme__toggler .toggle-slot {
+  box-shadow: inset 0px 1px 2px rgba(255, 255, 255, 0.25),
+    0px 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+.toggle-checkbox.active__checked~.toggle-slot {
+  background-color: #31d0aa;
+}
+
+.toggle-button {
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: inset 0px 0px 0px 0.75em #ffbb52;
+  transform: translate(0.3em, 0.25em);
+  transition: background-color 250ms, border-color 250ms,
+    transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
+}
+
+.toggle-checkbox.active__checked~.toggle-slot .toggle-button {
+  background-color: #485367;
+  box-shadow: inset 0px 0px 0px 0.75em white;
+  transform: translate(3.65em, 0.25em);
+}
+
+/* dashboard content */
+.reservation__noti__section,
+.monthly__revenue__section {
+  padding: 3rem 2rem 2rem;
+}
+
+.reservation__noti__section .reservation__noti__container,
+.monthly__revenue__section .monthly__revenue__container {
+  width: 100%;
+  border-radius: 0.35rem;
+  box-shadow: 0 0.1rem 0.5rem 0 rgba(31, 38, 135, 0.37);
+  padding: 0.5rem 1.5rem 2rem;
+  background-color: var(--white-color);
+}
+
+.reservation__noti__container .reservation__noti__header,
+.monthly__revenue__container .monthly__revenue__header {
+  padding-block: 1rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.monthly__revenue__container .monthly__revenue__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+
+.reservation__noti__header h2,
+.monthly__revenue__header h2 {
+  font-size: var(--h2-font-size);
+  text-transform: uppercase;
+  word-spacing: 0.5rem;
+}
+
+.reservation__noti__header .noti__input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 0.75rem;
+  padding-top: 1rem;
+}
+
+.noti__input #date,
+.noti__input #time,
+.monthly__revenue__header #month,
+.notificationBtn__container .notificationBtn {
+  width: 9rem;
+  padding: 0.75rem 0.5rem;
+  border: 1.5px solid var(--black-lt-color);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.noti__input #date,
+.noti__input #time,
+.monthly__revenue__header #month,
+.notificationBtn__container .mailToBtn {
+  color: var(--white-color);
+  background-color: var(--primary-lt-color);
+}
+
+.darkTheme .noti__input #date,
+.darkTheme .noti__input #time,
+.darkTheme .monthly__revenue__header #month,
+.darkTheme .notificationBtn__container .mailToBtn {
+  color: var(--background-color);
+  background-color: var(--scroll-color);
+}
+
+.notificationBtn__container .mailToBtn a {
+  color: var(--white-color);
+}
+
+.darkTheme .notificationBtn__container .mailToBtn a {
+  color: var(--background-color);
+}
+
+.notificationBtn__container .deleteBtn {
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+.noti__input #date:hover,
+.noti__input #time:hover,
+.monthly__revenue__header #month:hover,
+.notificationBtn__container .mailToBtn:hover {
+  border: 1.5px solid var(--black-color);
+  background-color: var(--primary-color);
+}
+
+.darkTheme .noti__input #date:hover,
+.darkTheme .noti__input #time:hover,
+.darkTheme .monthly__revenue__header #month:hover,
+.darkTheme .notificationBtn__container .mailToBtn:hover {
+  background-color: var(--primary-color);
+}
+
+.notificationBtn__container .deleteBtn:hover {
+  color: var(--white-color);
+  background-color: var(--failed-color);
+}
+
+table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1.5px solid var(--scroll-color);
+  border-collapse: collapse;
+}
+
+table tr {
+  border: 1.5px solid var(--scroll-color);
+}
+
+table th,
+table td {
+  padding: 0.65rem 0.5rem;
+  word-wrap: break-word;
+  text-align: left;
+  font-size: var(--small-font-size);
+}
+
+table th {
+  font-weight: var(--font-bold);
+  letter-spacing: 0.5px;
+}
+
+table .status,
+.reservation__content .reservation__status {
+  text-transform: capitalize;
+}
+
+table .confirmed,
+.reservation__content .confirmed {
+  color: var(--success-color);
+}
+
+table .cancel,
+.reservation__content .cancel {
+  color: var(--failed-color);
+}
+
+.reservation__noti__container .reservation__noti__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+}
+
+.reservation__noti__footer .pages__shower {
+  font-size: var(--small-font-size);
+}
+
+.pages__shower .current__page,
+.pages__shower .total__page {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semibold);
+  padding-inline: 0.25rem;
+}
+
+.reservation__noti__footer .pages__slider {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.pages__slider i {
+  font-size: var(--h2-font-size);
+  cursor: pointer;
+}
+
+.revenue__content .revenue__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  margin-block: 1.75rem;
+}
+
+.revenue__container .week__count {
+  font-weight: var(--font-semibold);
+}
+
+.revenue__container .revenue__bar {
+  width: 100%;
+  height: 1.9rem;
+  border-radius: 1rem;
+  background-color: var(--scroll-color);
+  box-shadow: 0 0.1rem 0.5rem 0 rgba(0, 0, 0, 0.1) inset;
+}
+
+.darkTheme .revenue__container .revenue__bar {
+  background-color: var(---primary-color);
+}
+
+.revenue__bar .progress__bar {
+  height: 100%;
+  font-size: var(--smaller-font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem 0 0 1rem;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.darkTheme .revenue__bar .progress__bar {
+  color: var(--black-color);
+  background-color: var(--scroll-color);
+}
+
+.revenue__container:nth-child(1) .progress__bar {
+  width: 25%;
+}
+
+.revenue__container:nth-child(2) .progress__bar {
+  width: 85%;
+}
+
+.revenue__container:nth-child(3) .progress__bar {
+  width: 50%;
+}
+
+.revenue__container:nth-child(4) .progress__bar {
+  width: 70%;
+}
+
+/* reservation management */
+.reservation__noti__content .reservation__content__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 0.5rem;
+  padding-block: 1rem;
+}
+
+.reservation__content__container .reservation__content {
+  font-size: var(--small-font-size);
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+  row-gap: 0.25rem;
+  padding: 0.5rem;
+  border: 1.5px solid var(--scroll-color);
+  border-radius: 0.25rem;
+}
+
+.reservation__content__container .notificationBtn__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* menus management */
+.menus__section {
+  padding: 3rem 2rem 2rem;
+}
+
+.menus__container .menus__card__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.menus__card__container .menus__card {
+  height: 16rem;
+  display: flex;
+  color: var(--primary-color);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 1rem 0 rgba(31, 38, 135, 0.37);
+  overflow: hidden;
+}
+
+.menus__card .menus__img {
+  width: 40%;
+  height: 100%;
+}
+
+.menus__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.menus__card .menus__details {
+  width: 60%;
+  padding: 1rem;
+}
+
+.menus__details .menus__name__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.menus__name__price .menus__name {
+  font-size: var(--h3-font-size);
+}
+
+.menus__name__price .menus__price {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semibold);
+}
+
+.menus__details .raw__materials {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semibold);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.raw__materials span {
+  padding-inline: 3px;
+}
+
+.menus__details .menus__desc {
+  font-size: var(--small-font-size);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  line-height: 140%;
+  color: var(--primary-lt-color);
+}
+
+.menus__details .editBtn,
+.img__input label,
+.edit__menus .submitBtn button,
+.chef__card .editBtn,
+.chef__input label,
+.edit__chefs .submitBtn button,
+.location__card .editBtn,
+.edit__location .submitBtn button,
+.table__card .editBtn,
+.edit__tables .submitBtn button {
+  position: relative;
+  height: 2.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  color: var(--white-color);
+  background-color: var(--primary-lt-color);
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--black-lt-color);
+  cursor: pointer;
+  transition: background-color 300ms linear;
+}
+
+.darkTheme .menus__details .editBtn,
+.darkTheme .img__input label,
+.darkTheme .edit__menus .submitBtn button,
+.darkTheme .chef__card .editBtn,
+.darkTheme .chef__input label,
+.darkTheme .edit__chefs .submitBtn button,
+.darkTheme .location__card .editBtn,
+.darkTheme .edit__location .submitBtn button,
+.darkTheme .table__card .editBtn,
+.darkTheme .edit__tables .submitBtn button {
+  color: var(--background-color);
+  background-color: var(--scroll-color);
+}
+
+.menus__details .editBtn,
+.submitBtn button,
+.chef__card .editBtn,
+.location__card .editBtn,
+.table__card .editBtn {
+  width: 8rem;
+}
+
+.editBtn p,
+.img__input label p,
+.submitBtn button {
+  font-size: var(--small-font-size);
+}
+
+.editBtn i,
+.img__input label i {
+  font-size: var(--h3-font-size);
+}
+
+.editBtn:hover,
+.add__new__menus .add__menusBtn:hover,
+.img__input label:hover,
+.submitBtn button:hover,
+.add__new__chef .add__chefBtn:hover,
+.add__new__table .add__tableBtn:hover,
+.darkTheme .editBtn:hover,
+.darkTheme .add__new__menus .add__menusBtn:hover,
+.darkTheme .img__input label:hover,
+.darkTheme .submitBtn button:hover,
+.darkTheme .add__new__chef .add__chefBtn:hover,
+.darkTheme .add__new__table .add__tableBtn:hover {
+  background-color: var(--primary-color);
+}
+
+/* add new menus */
+.menus__container .add__new__menus,
+.chefs__container .add__new__chef,
+.tables__section .add__new__table {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  border-top: 1.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.add__new__menus .add__menusBtn,
+.add__new__chef .add__chefBtn,
+.add__new__table .add__tableBtn {
+  position: relative;
+  width: 12rem;
+  height: 3.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.75rem;
+  color: var(--white-color);
+  background-color: var(--primary-lt-color);
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--black-lt-color);
+  cursor: pointer;
+  transition: background-color 300ms linear;
+}
+
+.darkTheme .add__new__menus .add__menusBtn,
+.darkTheme .add__new__chef .add__chefBtn,
+.darkTheme .add__new__table .add__tableBtn {
+  color: var(--background-color);
+  background-color: var(--scroll-color);
+}
+
+.add__menusBtn i,
+.add__chefBtn i,
+.add__tableBtn i {
+  font-size: var(--h2-font-size);
+}
+
+.add__menusBtn .addBtn__title,
+.add__chefBtn .addBtn__title,
+.add__tableBtn .addBtn__title {
+  font-size: var(--small-font-size);
+}
+
+/* <===== edit theme mode =====> */
+.edit__version__container {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  padding: 3rem 2rem;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  transition: all 0.4s linear;
+  background-color: var(--white-color);
+  z-index: 999;
+}
+
+.edit__version__container.edit__active {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.edit__version__container .edit__menus,
+.edit__version__container .edit__chefs,
+.edit__version__container .edit__location,
+.edit__version__container .edit__tables {
+  max-width: 36rem;
+  padding: 1.75rem 1.5rem 2.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--white-color);
+  box-shadow: 0 0.25rem 1rem 0 rgba(31, 38, 135, 0.37);
+}
+
+.edit__menus form,
+.edit__chefs form,
+.edit__location form,
+.edit__tables form {
+  position: relative;
+}
+
+.edit__menus form .fa-xmark,
+.edit__chefs form .fa-xmark,
+.edit__location form .fa-xmark,
+.edit__tables form .fa-xmark {
+  font-size: var(--h1-font-size);
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: color 150ms ease-out;
+}
+
+.darkTheme .edit__menus form .fa-xmark,
+.darkTheme .edit__chefs form .fa-xmark,
+.darkTheme .edit__location form .fa-xmark,
+.darkTheme .edit__tables form .fa-xmark {
+  color: var(--background-color);
+}
+
+.edit__menus form .fa-xmark:hover,
+.edit__chefs form .fa-xmark:hover,
+.edit__location form .fa-xmark:hover,
+.edit__tables form .fa-xmark:hover {
+  color: var(--failed-color);
+}
+
+.edit__menus form .img__input,
+.edit__chefs form .img__input,
+.edit__location form .img__input,
+.edit__tables form .img__input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.img__input .menu__image,
+.img__input .chef__image,
+.img__input .location__image,
+.img__input .table__image {
+  width: 14rem;
+  height: 14rem;
+  border: 1.5px solid hsl(212, 12%, 72%);
+  border-radius: 0.25rem;
+}
+
+.menu__image img,
+.chef__image img,
+.location__image img,
+.table__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+
+.img__input label {
+  width: 11rem;
+  text-transform: capitalize;
+}
+
+.img__input #menu_img,
+.img__input #chef_img,
+.img__input #table_img {
+  display: none;
+}
+
+.edit__menus form .edit__inputs__container,
+.edit__chefs form .edit__inputs__container,
+.edit__location form .edit__inputs__container,
+.edit__tables form .edit__inputs__container {
+  padding-bottom: 1.5rem;
+}
+
+.edit__inputs__container .input__field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.input__field p {
+  width: 6rem;
+  text-transform: capitalize;
+  color: var(--primary-color);
+}
+
+.darkTheme .input__field p {
+  color: var(--background-color);
+}
+
+.input__field input,
+.input__field textarea,
+.img__input #map_image {
+  font-size: var(--small-font-size);
+  height: 2rem;
+  padding: 1.25rem 0.5rem;
+  outline: none;
+  border: 1.5px solid var(--scroll-color);
+  border-radius: 5px;
+}
+
+.darkTheme .input__field input,
+.darkTheme .input__field textarea,
+.darkTheme .img__input #map_image {
+  color: var(--background-color);
+}
+
+.input__field input,
+.input__field textarea,
+.input__field #table_price {
+  width: 20rem;
+}
+
+.input__field #table_price {
+  font-size: var(--small-font-size);
+  height: 2.75rem;
+  outline: none;
+  padding-inline: 1rem;
+  border: 1.5px solid var(--scroll-color);
+  border-radius: 5px;
+}
+
+.img__input #map_image {
+  max-width: 20rem;
+}
+
+.input__field textarea {
+  height: 6rem;
+}
+
+.input__field input:hover,
+.input__field input:focus,
+.input__field textarea:hover,
+.input__field textarea:focus,
+.img__input #map_image:hover,
+.img__input #map_image:focus {
+  border: 1.5px solid var(--primary-color);
+}
+
+.darkTheme .input__field input:hover,
+.darkTheme .input__field input:focus,
+.darkTheme .input__field textarea:hover,
+.darkTheme .input__field textarea:focus,
+.darkTheme .img__input #map_image:hover,
+.darkTheme .img__input #map_image:focus {
+  border: 1.5px solid var(--background-color);
+}
+
+/* chefs management */
+.chefs__section,
+.tables__section {
+  padding: 3rem 2rem 2rem;
+}
+
+.chefs__container .chefs__card__container {
+  width: 100%;
+  padding: 0.5rem 0.75rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
+  gap: 1.25rem;
+}
+
+.chefs__container .chef__card,
+.tables__container .table__card {
+  border-radius: 0.5rem;
+  padding: 2rem 1.25rem;
+  box-shadow: 0 0.25rem 1rem 0 rgba(31, 38, 135, 0.37);
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+
+.darkTheme .tables__container .table__card {
+  color: var(--background-color);
+}
+
+.chef__card .chef__img {
+  max-width: 20rem;
+  border-radius: 0.25rem;
+}
+
+.table__card .table__img {
+  border-radius: 0.25rem;
+}
+
+.chef__img img,
+.table__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 16 / 9;
+  border-radius: inherit;
+}
+
+.chef__card .chef__info {
+  padding-block: 1rem;
+}
+
+.chef__info .chef__info__row,
+.chef__info .chef__detail__row {
+  font-size: var(--small-font-size);
+  width: 100%;
+  display: flex;
+  row-gap: 0.25rem;
+  column-gap: 1rem;
+  margin-block: 0.5rem;
+  padding-block: 0.25rem;
+}
+
+.chef__info__row .title,
+.chef__detail__row .details {
+  text-transform: capitalize;
+  font-weight: var(--font-semibold);
+}
+
+.chef__info__row .title {
+  width: 40%;
+}
+
+.darkTheme .chef__info__row .title {
+  color: var(--background-color);
+}
+
+.chef__info__row .desc span {
+  margin-right: 1.5rem;
+}
+
+.chef__info__row .desc,
+.chef__detail__row .chef__details {
+  letter-spacing: 0.2px;
+  word-spacing: 2px;
+  line-height: 140%;
+  color: var(--primary-lt-color);
+}
+
+.darkTheme .chef__info__row .desc,
+.darkTheme .chef__detail__row .chef__details {
+  color: var(--black-lt-color);
+}
+
+
+.chef__info__row .desc {
+  width: 60%;
+}
+
+.chef__info .chef__detail__row {
+  flex-direction: column;
+}
+
+/* location management */
+.location__section {
+  padding: 3rem 2rem 2rem;
+}
+
+.location__card .map__container {
+  width: 100%;
+  height: 18rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--scroll-color);
+}
+
+.map__container .map {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  box-shadow: 0 0.25rem 1rem 0 rgba(31, 38, 135, 0.37);
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: inherit;
+}
+
+.contact__info__container .contact__info {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.25rem;
+  margin-block: 1.25rem;
+}
+
+.darkTheme .contact__info__container .contact__info {
+  color: var(--primary-color);
+}
+
+.contact__info .title {
+  position: relative;
+  width: 50%;
+  font-weight: var(--font-semibold);
+}
+
+.contact__info .contact__details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.15rem;
+}
+
+.contact__details p {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.contact__details p::before {
+  position: absolute;
+  content: ":";
+  left: 0;
+  pointer-events: none;
+}
+
+/* ===== Profile style ===== */
+.profile__section {
+  display: flex;
+  justify-content: center;
+}
+
+.darkTheme .profile__section {
+  color: var(--primary-color);
+}
+
+.profile__section .profile__container {
+  max-width: 43rem;
+  padding: 2rem;
+}
+
+.profile__container .profile__img__editor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile__img__editor .profile__img__container {
+  display: flex;
+  align-items: center;
+  column-gap: 1.25rem;
+}
+
+.profile__img__container .profile__image {
+  width: 5rem;
+  height: 5rem;
+  border: 1.5px solid var(--primary-color);
+  border-radius: 50%;
+}
+
+.profile__img__container .profile__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+
+.profile__img__container .profile__details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 0.5rem;
+}
+
+.profile__details .username {
+  font-weight: var(--font-semibold);
+}
+
+.profile__details .member__status {
+  font-size: var(--small-font-size);
+  color: var(--black-lt-color);
+}
+
+.darkTheme .profile__details .member__status {
+  color: var(--primary-lt-color);
+}
+
+.profile__img__editor .upload__btn,
+.logout .logout__btn a,
+.delete__account .delete__btn,
+.edit__input__container .save__btn {
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid var(--black-color);
+  color: var(--black-color);
+  margin-bottom: 0;
+}
+
+.profile__container .button {
+  background-color: inherit;
+}
+
+.profile__container .button:hover {
+  background-color: var(--scroll-color);
+}
+
+.profile__img__editor .upload__btn {
+  width: 12rem;
+}
+
+.profile__container .profile__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.profile__info .info__field {
+  font-weight: var(--font-semibold);
+}
+
+.profile__info .profile__editor {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.profile__editor h3 {
+  cursor: pointer;
+  user-select: none;
+}
+
+.profile__editor .closeEdit {
+  display: none;
+}
+
+.profile__container .logout {
+  margin-block: 2rem 3rem;
+}
+
+.logout .logout__btn a {
+  width: 8rem;
+  border-radius: 5px;
+}
+
+.profile__container .delete__account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1.25rem;
+}
+
+.delete__account .delete__info h3 {
+  margin-bottom: 1rem;
+}
+
+.delete__account .delete__info p {
+  line-height: 140%;
+}
+
+.delete__account .delete__btn {
+  width: 7rem;
+}
+
+.profile__container .profile__edit__input {
+  margin-bottom: 1.75rem;
+}
+
+.profile__edit__input .edit__input__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+}
+
+.edit__input__container .edit__input {
+  width: 100%;
+}
+
+.edit__input__container .edit__input input {
+  width: 23.75rem;
+  height: 50px;
+  border: 1.5px solid var(--black-ltt-color);
+  border-radius: 2rem;
+  outline: none;
+  padding-inline: 1.5rem;
+  background-color: inherit;
+  transition: all 300ms ease;
+}
+
+.darkTheme .edit__input__container .edit__input input {
+  color: var(--primary-color);
+  border: 1.5px solid var(--primary-lt-color);
+}
+
+.darkTheme .edit__input__container .edit__input input:hover,
+.darkTheme .edit__input__container .edit__input input:focus {
+  border: 1.5px solid var(--primary-color);
+}
+
+.darkTheme .edit__input__container .edit__input input::placeholder {
+  color: var(--primary-color);
+}
+
+.edit__input__container .save__btn {
+  width: 6rem;
+  height: 50px;
+}
+
+.profile__edit__input .error {
+  margin-top: 0.5rem;
+}
+
+.profile__container .button {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semibold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 1rem;
+  color: var(--white-color);
+  background-color: var(--button-lt-color);
+  box-shadow: 0px 4px 6px rgb(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 300ms ease-out;
+}
+
+.profile__container .button:hover {
+  background-color: var(--button-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.profile__edit__input .error {
+  font-size: var(--smaller-font-size);
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  color: var(--failed-color);
+  display: none;
+}
+
+/* table management */
+.tables__section .tables__container {
+  width: 100%;
+  padding: 0.5rem 0.75rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+  gap: 1.25rem;
+}
+
+.table__card .table__info__container {
+  padding-block: 0.75rem 1.25rem;
+}
+
+.table__info__container .table__info {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.table__info .title {
+  font-weight: var(--font-semibold);
+}

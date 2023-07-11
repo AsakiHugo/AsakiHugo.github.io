@@ -1,0 +1,156 @@
+/* ===== google font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap');
+
+/* ===== Variable Css ===== */
+:root {
+    /* ===== Colors ===== */
+    --primary-color: hsl(190, 64%, 22%);
+    --primary-lt-color: hsla(190, 64%, 22%, 0.75);
+    --background-color: hsl(192, 100%, 99%);
+    --dark-color: hsl(240, 54%, 11%);
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(300, 6%, 13%);
+    --black-lt-color: hsla(300, 6%, 13%, 0.5);
+    --black-ltt-color: hsla(300, 6%, 13%, 0.25);
+    --accent1-color: hsl(40, 70%, 70%);
+    --accent2-color: hsl(201, 99%, 63%);
+    --accent3-color: hsl(192, 96%, 90%);
+    --accent4-color: hsl(13, 81%, 54%);
+    --success-color: hsl(166, 63%, 50%);
+    --failed-color: hsl(0, 100%, 50%);
+    --button-color: hsl(239, 82%, 58%);
+    --button-lt-color: hsl(239, 82%, 50%);
+    --scroll-color: hsl(189, 14%, 90%);
+    --scroll-thumb-color: hsl(192, 12%, 75%);
+
+    /* ===== Font and Typography ===== */
+    /* 1rem = 16px */
+    --body-font-family: 'Work Sans', sans-serif;
+    --biggest-font-size: 3.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .873rem;
+    --smaller-font-size: .813rem;
+
+    /* ===== Font Weight ===== */
+    --font-light: 400;
+    --font-semibold: 500;
+    --font-bold: 700;
+
+    /* ===== z-index ===== */
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+    /* ===== box-shadow ===== */
+    --shadow: 0px 2px 4px rgba(0, 0, 0, 0.25),
+        0px 6px 12px rgba(0, 0, 0, 0.25);
+    --shadow-base: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== base style ===== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    /* Scroll bar for firefox */
+    scrollbar-color: var(--scroll-thumb-color) var(--scroll-color);
+    scrollbar-width: .6rem;
+}
+
+/* Scroll bar for chrome */
+::-webkit-scrollbar {
+    width: .6rem;
+    border-radius: .5rem;
+    background-color: var(--scroll-color);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: var(--scroll-thumb-color);
+}
+
+::placeholder {
+    color: var(--black-color);
+}
+
+::-ms-input-placeholder {
+    color: var(--black-color);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
+body {
+    font-family: var(--body-font-family);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-light);
+    color: var(--black-color);
+    background-color: var(--background-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1280px;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: var(--font-bold);
+}
+
+input,
+select,
+option {
+    font-family: inherit;
+}
+
+/* ===== Responsive and Typography ===== */
+@media screen and (max-width: 1024px) {
+    :root {
+        --biggest-font-size: 2.25rem;
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1rem;
+        --normal-font-size: .938rem;
+        --small-font-size: .813rem;
+        --smaller-font-size: .75rem;
+    }
+}
+
+/* Dark Theme */
+body.darkTheme {
+    /* ===== Colors ===== */
+    --primary-color: hsl(0, 0%, 100%);
+    --primary-lt-color: hsl(0, 0%, 70%);
+    --background-color: hsl(190, 64%, 22%);
+
+    --shadow: 0px 2px 4px rgba(255, 255, 255, 0.25),
+        0px 6px 12px rgba(255, 255, 255, 0.25);
+    --shadow-base: 2px 2px 4px rgba(255, 255, 255, 0.25);
+}

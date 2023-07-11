@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ===== about website info ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SanCho Online Restaurant Reservation System(Admin)" />
+    <meta name="keywords"
+        content="SanCho Restaurant, Online Restaurant Reservation, Online Table Booking, Admin Dashboard, Tables Management" />
+    <meta name="author" content="Kyaw Khaing" />
+    <meta name="contact" content="kyawkhaing.kk004@gmail.com" />
+
+    <!-- ===== website title with icon ===== -->
+    <link rel="Icon" type="svg" href="/images/logo/Tab_Logo.svg">
+    <title>SanCho Admin Dashboard</title>
+
+    <!-- ===== custom css ===== -->
+    <link rel="stylesheet" href="/css/reusable.css">
+    <link rel="stylesheet" href="/css/admin_css/style.css">
+    <link rel="stylesheet" href="/css/admin_css/media.css">
+
+    <!-- ===== fontawesome cdn ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <div class="section">
+        <div class="container dashboard">
+
+            <!-- sidebar -->
+            <aside class="sidebar__container">
+                <!-- close-btn -->
+                <div class="sidebar__closeBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+                <!-- sidebar profile -->
+                <div class="profile__content">
+                    <a href="profile.html" class="profile__img">
+                        <img loading="lazy" src="/images/person/warren-uuVguyksViA-unsplash.jpg" alt="profile-img">
+                    </a>
+                    <p class="person__name">Amara Thiri Phone Myat</p>
+                </div>
+
+                <!-- sidebar content -->
+                <nav class="nav">
+                    <ul>
+                        <li class="nav__list">
+                            <a href="index.html">
+                                <i class="fa-solid fa-house"></i>
+                                <div class="link__name">Dashboard</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="reservation.html">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <div class="link__name">Reservation</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="">
+                                <i class="fa-solid fa-chair"></i>
+                                <div class="link__name">Tables</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="menu.html">
+                                <i class="fa-solid fa-utensils"></i>
+                                <div class="link__name">Menus</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="chef.html">
+                                <i class="fa-solid fa-user"></i>
+                                <div class="link__name">Chef</div>
+                            </a>
+                        </li>
+
+                        <li class="nav__list">
+                            <a href="location.html">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="link__name">Location & Contact</div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- logout -->
+                <div class="aside__footer">
+                    <div class="profile__logout">
+                        <a href="/html/user_html/entrance/login.html">
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                            <div class="logout__name">Sign Out</div>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- dashboard container -->
+            <main>
+                <div class="dashboard__content__container">
+
+                    <!-- header -->
+                    <header class="header">
+
+                        <!-- navigation -->
+                        <nav class="nav">
+                            <i class="fa-solid fa-bars"></i>
+
+                            <!-- restaurant logo -->
+                            <div class="restaurant__logo">
+                                <img src="/images/logo/Black logo - no background.svg" alt="restaurant-logo">
+                            </div>
+
+                            <!-- theme toggler -->
+                            <div class="theme__toggler">
+                                <label>
+                                    <input class="toggle-checkbox" type="checkbox">
+                                    <div class="toggle-slot">
+                                        <div class="toggle-button"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </nav>
+                    </header>
+
+                    <!-- table container -->
+                    <section class="tables__section">
+                        <div class="tables__container">
+                        </div>
+
+                        <!-- add new menus btn -->
+                        <div class="add__new__table">
+                            <button class="add__tableBtn">
+                                <i class="fa-solid fa-circle-plus"></i>
+                                <p class="addBtn__title">Add New Chef</p>
+                            </button>
+
+                            <!-- editVersion -->
+                            <div class="edit__version__container">
+                                <div class="edit__tables">
+
+                                    <!-- chef edit -->
+                                    <form action="" method="post">
+                                        <!-- close edit chef -->
+                                        <i class="fa-solid fa-xmark"></i>
+
+                                        <!-- image input -->
+                                        <div class="img__input">
+                                            <div class="table__image">
+                                                <img src="/images/person/upload-img.jpg" alt="table-img">
+                                            </div>
+                                            <label for="table_img">
+                                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                                <p>Upload table</p>
+                                            </label>
+                                            <input type="file" accept="image/jpeg, image/png, image/jpg"
+                                                name="table_img" id="table_img">
+                                        </div>
+
+                                        <!-- text input -->
+                                        <div class="edit__inputs__container">
+
+                                            <div class="input__field">
+                                                <p>table type</p>
+                                                <select name="table_price" id="table_price">
+                                                    <option value="single table">single table</option>
+                                                    <option value="couple table">couple table</option>
+                                                    <option value="family table">family table</option>
+                                                    <option value="party table">party table</option>
+                                                </select>
+                                            </div>
+                                            <div class="input__field">
+                                                <p>table price</p>
+                                                <input type="text" name="table_type" id="table_type">
+                                            </div>
+
+                                        </div>
+
+                                        <!-- submit button -->
+                                        <div class="submitBtn">
+                                            <button type="submit">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- custom js -->
+    <script src="/javascript/admin_js/script.js"></script>
+
+</body>
+
+</html>
