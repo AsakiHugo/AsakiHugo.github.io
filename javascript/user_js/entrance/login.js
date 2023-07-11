@@ -58,10 +58,10 @@ form.addEventListener("submit", (e) => {
         !passwordField.classList.contains("active__error")
     ) {
 
-        if (passwordInput.value.match(userKey)) {
+        if (passwordInput.value === userKey) {
             form.reset();
             location.href = form.getAttribute("action");
-        } else if (passwordInput.value.match(adminKey)) {
+        } else if (passwordInput.value === adminKey) {
             form.reset();
             location.href = "/html/admin_html/admin.html";
         }
