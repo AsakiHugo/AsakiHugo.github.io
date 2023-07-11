@@ -40,7 +40,7 @@ navLinkEls.forEach(navLinkEl => {
     const navLinkPathName = new URL(navLinkEl.href).pathname;
 
     if ((windowPathName === navLinkPathName) ||
-        (windowPathName === '/index.html' && navLinkPathName === '/')) {
+        (windowPathName === '/admin.html' && navLinkPathName === '/')) {
         navLinkEl.parentElement.classList.add("sidebar__active");
     }
 })
@@ -94,7 +94,7 @@ theme_toggler.addEventListener("click", () => {
 });
 
 // Reservation lists shower
-if (window.location.pathname.includes("index.html")) {
+if (window.location.pathname.includes("admin.html")) {
 
     function getMenuReservationPerson(e) {
         e.preventDefault();

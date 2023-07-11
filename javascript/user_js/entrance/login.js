@@ -63,7 +63,7 @@ form.addEventListener("submit", (e) => {
             location.href = form.getAttribute("action");
         } else if (passwordInput.value.match(adminKey)) {
             form.reset();
-            location.href = "/html/admin_html/index.html";
+            location.href = "/html/admin_html/admin.html";
         }
     }
 });
