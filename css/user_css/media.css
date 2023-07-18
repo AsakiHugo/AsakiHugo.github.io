@@ -693,6 +693,11 @@
         height: 50px;
     }
 
+    .reservation__btn::before {
+        min-width: calc(190px + 6px);
+        min-height: calc(50px + 6px);
+    }
+
     .swiper .swiper-button-prev,
     .swiper .swiper-button-next {
         width: 40px;
