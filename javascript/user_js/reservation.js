@@ -38,16 +38,6 @@ function handleDate() {
     }
 }
 
-// function handlePerson() {
-//     const errorTag = personField.lastElementChild;
-
-//     if (personInput.value == "") {
-//         errorTag.classList.add("active__error");
-//     } else {
-//         errorTag.classList.remove("active__error");
-//     }
-// }
-
 function handleTable() {
     const errorTag = tableField.lastElementChild;
 
@@ -196,7 +186,6 @@ reservation_form.addEventListener("submit", function (e) {
 
     if (
         dateField.querySelector(".active__error") == null &&
-        // personField.querySelector(".active__error") == null &&
         tableField.querySelector(".active__error") == null &&
         timeField.querySelector(".active__error") == null &&
         usernameField.querySelector(".active__error") == null &&
@@ -224,5 +213,5 @@ completion_btn.addEventListener("click", () => {
     complete_reservation.classList.remove("active__reconfirm");
     completion_container.classList.remove("active__reconfirm");
     reservation_form.reset();
-    location.href = "index.html";
+    location.href = "user.html";
 })

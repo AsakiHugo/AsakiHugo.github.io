@@ -15,7 +15,11 @@ function getMenuData(e) {
                 <div class="menus__card  mix ${menu.className}">
                     <div class="menus__img__container">
                         <div class="menus__img">
-                            <img loading="lazy" src="${menu.menu_img}" alt="menu-img">
+                            <picture>
+                                <source type="image/webp" srcset="${menu.menu_img}">
+                                <source type="image/jpeg" srcset="${menu.menu_img}">
+                                <img loading="lazy" src="${menu.menu_img}" alt="menu-img">
+                            </picture>
                         </div>
                     </div>
 
@@ -47,7 +51,11 @@ function getMenuData(e) {
                             <i class="fa-sharp fa-solid fa-circle-xmark"></i>
                             <div class="menus__img__card">
                                 <div class="menus__exp__img">
-                                    <img loading="lazy" src="${menu.menu_img}" alt="menu-img">
+                                    <picture>
+                                        <source type="image/webp" srcset="${menu.menu_img}">
+                                        <source type="image/jpeg" srcset="${menu.menu_img}">
+                                        <img loading="lazy" src="${menu.menu_img}" alt="menu-img">
+                                    </picture>
                                 </div>
                             </div>
 

@@ -17,9 +17,9 @@ window.addEventListener("scroll", () => {
 
     // active nav status 
     // we only have scrollY in index.html
-    if (window.location.pathname.includes("index.html")) {
+    if (window.location.pathname.includes("user.html")) {
         sectionEls.forEach(sectionEl => {
-            const sectionElOffsetTop = sectionEl.offsetTop - 110;
+            const sectionElOffsetTop = sectionEl.offsetTop - 100;
 
             if (window.scrollY >= sectionElOffsetTop) {
                 currentSection = sectionEl.id;
@@ -33,8 +33,13 @@ window.addEventListener("scroll", () => {
             }
         })
 
+        const home = document.querySelector("main #home");
+        const homeHeight = home.offsetHeight;
+        const showcase = document.querySelector(".showcase__menu");
+        const showcaseHeight = showcase.offsetHeight;
+
         // scroll to home
-        if (window.scrollY >= 260) {
+        if (window.scrollY >= (homeHeight - showcaseHeight)) {
             scrollUpArrow.classList.add("active__scroll__up");
         } else {
             scrollUpArrow.classList.remove("active__scroll__up");
@@ -65,20 +70,30 @@ closeBar.addEventListener("click", () => {
     closeBar.classList.remove("active__side");
 })
 
-// navigation lists indicator within another page html
-// Get the current page's URL path
-const windowPathName = window.location.pathname;
+if (window.location.pathname.includes("user.html") || window.location.pathname.includes("reservation.html")) {
+    // navigation lists indicator within another page html
+    // Get the current page's URL path
+    const windowPathName = window.location.pathname;
 
-// Get the URL fragment identifier
-const fragmentIdentifier = window.location.hash;
+    // Get the URL fragment identifier
+    const fragmentIdentifier = window.location.hash;
 
-navLinkEls.forEach(navLinkEl => {
-    const navLinkPathName = new URL(navLinkEl.href).hash;
+    navLinkEls.forEach(navLinkEl => {
+        const navLinkPathName = new URL(navLinkEl.href).hash;
 
-    if ((fragmentIdentifier === navLinkPathName) ||
-        (windowPathName === '/index.html' && navLinkPathName === '/')) {
-        navLinkEl.parentElement.classList.add("active__nav__link");
-    }
+        if ((fragmentIdentifier === navLinkPathName) ||
+            (windowPathName === '/user.html' && navLinkPathName === '/')) {
+            navLinkEl.parentElement.classList.add("active__nav__link");
+        }
+    })
+}
+
+// profile card
+const profile_shortcut = document.querySelector(".nav__right .profile"),
+    profile_wraper = document.querySelector(".profile .profile__wrapper");
+
+profile_shortcut.addEventListener("click", () => {
+    profile_wraper.classList.toggle("active__profile");
 })
 
 // dark-light theme toggle and logo
@@ -149,7 +164,7 @@ category_btns.forEach(category_btn => {
     })
 })
 
-if (window.location.pathname.includes("index.html")) {
+if (window.location.pathname.includes("user.html")) {
     const subscribeBtn = document.querySelector(".subscribe__input .subscribe__btn");
     const emailInput = document.querySelector(".subscribe__field #subscibe_email");
 
