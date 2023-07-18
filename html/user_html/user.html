@@ -45,27 +45,27 @@
                 <!-- nav lists -->
                 <ul class="nav__lists">
                     <li class="nav__list">
-                        <a href="#home" class="nav__link">
+                        <a href="#home" class="nav__link" aria-label="link to home page">
                             Home
                         </a>
                     </li>
                     <li class="nav__list">
-                        <a href="#menu" class="nav__link">
+                        <a href="#menu" class="nav__link" aria-label="link to menu page">
                             Menu
                         </a>
                     </li>
                     <li class="nav__list">
-                        <a href="#chef" class="nav__link">
+                        <a href="#chef" class="nav__link" aria-label="link to chef page">
                             Chef
                         </a>
                     </li>
                     <li class="nav__list">
-                        <a href="#location" class="nav__link">
+                        <a href="#location" class="nav__link" aria-label="link to location page">
                             Location
                         </a>
                     </li>
                     <li class="nav__list">
-                        <a href="reservation.html" class="nav__link">
+                        <a href="reservation.html" class="nav__link" aria-label="link to reservation page">
                             Reservation
                         </a>
                     </li>
@@ -77,18 +77,20 @@
                 <ul class="social__lists">
                     <li class="social__list">
                         <a href="https://www.facebook.com/profile.php?id=100051889950358&mibextid=ZbWKwL"
-                            target="_blank" rel="noopener noreferrer" class="social__link">
+                            target="_blank" rel="noopener noreferrer" class="social__link"
+                            aria-label="link to facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
                     </li>
                     <li class="social__list">
                         <a href="https://instagram.com/kyawkhaing.kk003?igshid=NTc4MTIwNjQ2YQ==" target="_blank"
-                            rel="noopener noreferrer" class="social__link">
+                            rel="noopener noreferrer" class="social__link" aria-label="link to instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                     </li>
                     <li class="social__list">
-                        <a href="https://t.me/Hugo123hg" target="_blank" rel="noopener noreferrer" class="social__link">
+                        <a href="https://t.me/Hugo123hg" target="_blank" rel="noopener noreferrer" class="social__link"
+                            aria-label="link to telegram">
                             <i class="fa-brands fa-telegram"></i>
                         </a>
                     </li>
@@ -96,8 +98,8 @@
 
                 <!-- theme toggler -->
                 <div class="theme__toggler">
-                    <label>
-                        <input class="toggle-checkbox" type="checkbox">
+                    <label for="theme-toogle">
+                        <input class="toggle-checkbox" type="checkbox" id="theme-toogle">
                         <div class="toggle-slot">
                             <div class="toggle-button"></div>
                         </div>
@@ -105,7 +107,7 @@
                 </div>
 
                 <!-- profile -->
-                <a href="profile.html" class="profile">
+                <div class="profile">
                     <div class="profile__img">
                         <img src="/images/person/warren-uuVguyksViA-unsplash.jpg" class="profile__img"
                             alt="profile-img">
@@ -113,7 +115,35 @@
                     <p class="profile__username">
                         Eaint Amara Thiri
                     </p>
-                </a>
+
+                    <div class="profile__wrapper">
+                        <div class="profile__card">
+
+                            <div class="profile__summary">
+                                <div class="wrapper__profile__img">
+                                    <img src="/images/person/warren-uuVguyksViA-unsplash.jpg" class="profile__img2"
+                                        alt="profile-img">
+                                </div>
+
+                                <div class="profile__name">Eaint Amara Thiri</div>
+                                <div class="profile__email">eaintamarathiri.eaint001@gmail.com</div>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="profile__details">
+                                <a href="profile.html" class="profile__page" aria-label="link to profile page">
+                                    <p>Profile</p>
+                                    <i class="fa-solid fa-user"></i>
+                                </a>
+                                <a href="/index.html" class="logout__page" aria-label="link to logout page">
+                                    <p>Log out</p>
+                                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- side-bar toggler -->
                 <div class="hamburger">
@@ -130,11 +160,21 @@
         <section id="home" class="section">
             <div class="container home__container">
                 <div class="hero__img">
-                    <img loading="lazy" src="/images/restaurant/klara-kulikova-yjQDnOhGE34-unsplash.jpg"
-                        alt="restaurant-img">
+                    <picture>
+                        <source srcset="/images/restaurant/klara-kulikova-yjQDnOhGE34-unsplash.webp" type="image/webp">
+                        <source srcset="/images/restaurant/klara-kulikova-yjQDnOhGE34-unsplash.jpg" type="image/jpeg">
+                        <img loading="lazy" src="/images/restaurant/klara-kulikova-yjQDnOhGE34-unsplash.jpg"
+                            alt="restaurant-img">
+                    </picture>
                 </div>
 
                 <div class="hero__content">
+
+                    <!-- hero text -->
+                    <h1 class="hero__text">
+                        Savor Unforgettable Moments <br><span>with</span> Delicious Cuisine
+                    </h1>
+
                     <!-- restaurant opening time and day -->
                     <div class="restaurant__timeDay">
                         <h2 class="restaurant__time">
@@ -150,24 +190,31 @@
                         </div>
                     </div>
 
-                    <!-- hero text -->
-                    <h1 class="hero__text">
-                        Savor Unforgettable Moments <br><span>with</span> Delicious Cuisine
-                    </h1>
-
                     <!-- reservation button -->
-                    <button class="button reservation__btn">
-                        <a href="reservation.html">
+                    <button class="button reservation__btn" aria-label="reservation button">
+                        <a data-text="book a table" href="reservation.html" aria-label="link to reservation page">
                             <p>book a table</p>
                             <i class="fa-solid fa-utensils"></i>
                         </a>
                     </button>
+
+                    <div class="container2">
+                        <a href="#" data-text="1">
+                            <span>1</span>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </section>
 
         <section id="menu" class="section">
             <div class="container menu__container">
+                <!-- heading section title -->
+                <h1 class="section__title">
+                    Unforgettable Moments Found <br>
+                    <span>in Every Bite</span> of Our Menu
+                </h1>
 
                 <!-- showcase -->
                 <div class="showcase__menu">
@@ -177,7 +224,11 @@
                         <div class="swiper-wrapper menu__cards">
                             <div class="menu_card swiper-slide">
                                 <div class="menu__img">
-                                    <img loading="lazy" src="/images/main_dish/Paella-1.jpg" alt="menu-img">
+                                    <picture>
+                                        <source srcset="/images/main_dish/Paella-1.webp" type="image/webp">
+                                        <source srcset="/images/main_dish/Paella-1.jpg" type="image/jpeg">
+                                        <img loading="lazy" src="/images/main_dish/Paella-1.jpg" alt="menu-img">
+                                    </picture>
                                 </div>
                                 <p class="menu__name">
                                     Paella
@@ -185,7 +236,11 @@
                             </div>
                             <div class="menu_card swiper-slide">
                                 <div class="menu__img">
-                                    <img loading="lazy" src="/images/main_dish/Chicken Tikka.jpg" alt="menu-img">
+                                    <picture>
+                                        <source srcset="/images/main_dish/Chicken Tikka.webp" type="image/webp">
+                                        <source srcset="/images/main_dish/Chicken Tikka.jpg" type="image/jpeg">
+                                        <img loading="lazy" src="/images/main_dish/Chicken Tikka.jpg" alt="menu-img">
+                                    </picture>
                                 </div>
                                 <p class="menu__name">
                                     Chicken Tikka
@@ -193,7 +248,11 @@
                             </div>
                             <div class="menu_card swiper-slide">
                                 <div class="menu__img">
-                                    <img loading="lazy" src="/images/main_dish/Moussaka.jpg" alt="menu-img">
+                                    <picture>
+                                        <source srcset="/images/main_dish/Moussaka.webp" type="image/webp">
+                                        <source srcset="/images/main_dish/Moussaka.jpg" type="image/jpeg">
+                                        <img loading="lazy" src="/images/main_dish/Moussaka.jpg" alt="menu-img">
+                                    </picture>
                                 </div>
                                 <p class="menu__name">
                                     Moussaka
@@ -201,7 +260,11 @@
                             </div>
                             <div class="menu_card swiper-slide">
                                 <div class="menu__img">
-                                    <img loading="lazy" src="/images/drink/Champagne.jpg" alt="drink-img">
+                                    <picture>
+                                        <source srcset="/images/drink/Champagne.webp" type="image/webp">
+                                        <source srcset="/images/drink/Champagne.jpg" type="image/jpeg">
+                                        <img loading="lazy" src="/images/drink/Champagne.jpg" alt="drink-img">
+                                    </picture>
                                 </div>
                                 <p class="menu__name">
                                     Champagne
@@ -209,7 +272,11 @@
                             </div>
                             <div class="menu_card swiper-slide">
                                 <div class="menu__img">
-                                    <img loading="lazy" src="/images/main_dish/Pizza.jpg" alt="menu-img">
+                                    <picture>
+                                        <source srcset="/images/main_dish/Pizza.webp" type="image/webp">
+                                        <source srcset="/images/main_dish/Pizza.jpg" type="image/jpeg">
+                                        <img loading="lazy" src="/images/main_dish/Pizza.jpg" alt="menu-img">
+                                    </picture>
                                 </div>
                                 <p class="menu__name">
                                     Pizza
@@ -217,7 +284,11 @@
                             </div>
                             <div class="menu_card swiper-slide">
                                 <div class="menu__img">
-                                    <img loading="lazy" src="/images/main_dish/Samosa thoke.jpg" alt="menu-img">
+                                    <picture>
+                                        <source srcset="/images/main_dish/Samosa thoke.webp" type="image/webp">
+                                        <source srcset="/images/main_dish/Samosa thoke.jpg" type="image/jpeg">
+                                        <img loading="lazy" src="/images/main_dish/Samosa thoke.jpg" alt="menu-img">
+                                    </picture>
                                 </div>
                                 <p class="menu__name">
                                     Samosa thoke
@@ -225,7 +296,13 @@
                             </div>
                             <div class="menu_card swiper-slide">
                                 <div class="menu__img">
-                                    <img loading="lazy" src="/images/drink/Mango lassi.jpg" alt="drink-img">
+                                    <picture>
+                                        <source srcset="/images/restaurant/klara-kulikova-yjQDnOhGE34-unsplash.webp"
+                                            type="image/webp">
+                                        <source srcset="/images/restaurant/klara-kulikova-yjQDnOhGE34-unsplash.jpg"
+                                            type="image/jpeg">
+                                        <img loading="lazy" src="/images/drink/Mango lassi.jpg" alt="drink-img">
+                                    </picture>
                                 </div>
                                 <p class="menu__name">
                                     Mango lassi
@@ -233,7 +310,13 @@
                             </div>
                             <div class="menu_card swiper-slide">
                                 <div class="menu__img">
-                                    <img loading="lazy" src="/images/drink/Tequila.jpg" alt="drink-img">
+                                    <picture>
+                                        <source srcset="/images/restaurant/klara-kulikova-yjQDnOhGE34-unsplash.webp"
+                                            type="image/webp">
+                                        <source srcset="/images/restaurant/klara-kulikova-yjQDnOhGE34-unsplash.jpg"
+                                            type="image/jpeg">
+                                        <img loading="lazy" src="/images/drink/Tequila.jpg" alt="drink-img">
+                                    </picture>
                                 </div>
                                 <p class="menu__name">
                                     Tequila
@@ -241,7 +324,13 @@
                             </div>
                             <div class="menu_card swiper-slide">
                                 <div class="menu__img">
-                                    <img loading="lazy" src="/images/drink/whisky.jpg" alt="drink-img">
+                                    <picture>
+                                        <source srcset="/images/restaurant/klara-kulikova-yjQDnOhGE34-unsplash.webp"
+                                            type="image/webp">
+                                        <source srcset="/images/restaurant/klara-kulikova-yjQDnOhGE34-unsplash.jpg"
+                                            type="image/jpeg">
+                                        <img loading="lazy" src="/images/drink/whisky.jpg" alt="drink-img">
+                                    </picture>
                                 </div>
                                 <p class="menu__name">
                                     Pizza
@@ -254,8 +343,8 @@
                     </div>
 
                     <!-- view more button -->
-                    <button class="view__more__btn button">
-                        <a href="menu.html">
+                    <button class="view__more__btn button" aria-label="view to more menus">
+                        <a href="menu.html" aria-label="link to view more menus page">
                             <p>view more</p>
                             <i class="fa-solid fa-chevron-right"></i>
                         </a>
@@ -264,9 +353,14 @@
 
                 <!-- special menu -->
                 <div class="special__menu">
+
                     <div class="small__img__container">
                         <div class="special__small__img">
-                            <img src="/images/main_dish/special.jpg" alt="specail-menu">
+                            <picture>
+                                <source srcset="/images/main_dish/special.webp" type="image/webp">
+                                <source srcset="/images/main_dish/special.jpg" type="image/jpeg">
+                                <img src="/images/main_dish/special.jpg" alt="specail-menu">
+                            </picture>
                         </div>
                     </div>
 
@@ -285,7 +379,11 @@
 
                     <div class="large__img__container">
                         <div class="specail__large__img">
-                            <img src="/images/main_dish/special.jpg" alt="specail-menu">
+                            <picture>
+                                <source srcset="/images/main_dish/special.webp" type="image/webp">
+                                <source srcset="/images/main_dish/special.jpg" type="image/jpeg">
+                                <img src="/images/main_dish/special.jpg" alt="specail-menu">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -294,15 +392,26 @@
 
         <section id="chef" class="section">
             <div class="container chef__conatiner">
+                <!-- heading section title -->
+                <h1 class="section__title">
+                    Our Masterful Chefs<br>
+                    <span>Redefining</span> the Art of Flavors
+                </h1>
                 <div class="chef__card__container">
                     <div class="chef__cards swiper">
                         <div class="swiper-wrapper">
                             <div class="chef__card swiper-slide">
                                 <div class="left__side">
                                     <div class="chef__img">
-                                        <img loading="lazy"
-                                            src="/images/person/febrian-zakaria-SiQgni-cqFg-unsplash.jpg"
-                                            alt="chef-img">
+                                        <picture>
+                                            <source srcset="/images/person/febrian-zakaria-SiQgni-cqFg-unsplash.webp"
+                                                type="image/webp">
+                                            <source srcset="/images/person/febrian-zakaria-SiQgni-cqFg-unsplash.jpg"
+                                                type="image/jpeg">
+                                            <img loading="lazy"
+                                                src="/images/person/febrian-zakaria-SiQgni-cqFg-unsplash.jpg"
+                                                alt="chef-img">
+                                        </picture>
                                     </div>
                                 </div>
                                 <div class="right__side">
@@ -341,7 +450,12 @@
                             <div class="chef__card swiper-slide">
                                 <div class="left__side">
                                     <div class="chef__img">
-                                        <img loading="lazy" src="/images/person/baker-7998336_1280.jpg" alt="chef-img">
+                                        <picture>
+                                            <source srcset="/images/person/baker-7998336_1280.webp" type="image/webp">
+                                            <source srcset="/images/person/baker-7998336_1280.jpg" type="image/jpeg">
+                                            <img loading="lazy" src="/images/person/baker-7998336_1280.jpg"
+                                                alt="chef-img">
+                                        </picture>
                                     </div>
                                 </div>
                                 <div class="right__side">
@@ -374,8 +488,15 @@
                             <div class="chef__card swiper-slide">
                                 <div class="left__side">
                                     <div class="chef__img">
-                                        <img loading="lazy" src="/images/person/brooke-cagle-WfV4KscvvBQ-unsplash.jpg"
-                                            alt="chef-img">
+                                        <picture>
+                                            <source srcset="/images/person/brooke-cagle-WfV4KscvvBQ-unsplash.webp"
+                                                type="image/webp">
+                                            <source srcset="/images/person/brooke-cagle-WfV4KscvvBQ-unsplash.jpg"
+                                                type="image/jpeg">
+                                            <img loading="lazy"
+                                                src="/images/person/brooke-cagle-WfV4KscvvBQ-unsplash.jpg"
+                                                alt="chef-img">
+                                        </picture>
                                     </div>
                                 </div>
                                 <div class="right__side">
@@ -415,9 +536,18 @@
 
         <div class="section">
             <div class="container table__container">
+                <!-- heading section title -->
+                <h1 class="section__title">
+                    Our <span>Artfully</span> Set Restaurant Tables
+                </h1>
+
                 <article class="text__effect__container">
                     <h1 class="text">Single Table (25,000 Ks)</h1>
-                    <img src="/images/restaurant/Bee.jpg" alt="table-img" class="img__effect">
+                    <picture>
+                        <source srcset="/images/restaurant/Bee.webp" type="image/webp">
+                        <source srcset="/images/restaurant/Bee.jpg" type="image/jpeg">
+                        <img src="/images/restaurant/Bee.jpg" alt="table-img" class="img__effect">
+                    </picture>
                     <div class="moving__text__container">
                         <div class="moving__text">
                             <span>Refreshing</span>
@@ -430,7 +560,12 @@
 
                 <article class="text__effect__container">
                     <h1 class="text">Couple Table (32,000 Ks)</h1>
-                    <img src="/images/restaurant/albert-YYZU0Lo1uXE-unsplash.jpg" alt="table-img" class="img__effect">
+                    <picture>
+                        <source srcset="/images/restaurant/albert-YYZU0Lo1uXE-unsplash.webp" type="image/webp">
+                        <source srcset="/images/restaurant/albert-YYZU0Lo1uXE-unsplash.jpg" type="image/jpeg">
+                        <img src="/images/restaurant/albert-YYZU0Lo1uXE-unsplash.jpg" alt="table-img"
+                            class="img__effect">
+                    </picture>
                     <div class="moving__text__container">
                         <div class="moving__text">
                             <span>Reduce Depression</span>
@@ -443,7 +578,11 @@
 
                 <article class="text__effect__container">
                     <h1 class="text">Family Table (50,000 Ks)</h1>
-                    <img src="/images/restaurant/Cafe.jpg" alt="table-img" class="img__effect">
+                    <picture>
+                        <source srcset="/images/restaurant/Cafe.webp" type="image/webp">
+                        <source srcset="/images/restaurant/Cafe.jpg" type="image/jpeg">
+                        <img src="/images/restaurant/Cafe.jpg" alt="table-img" class="img__effect">
+                    </picture>
                     <div class="moving__text__container">
                         <div class="moving__text">
                             <span>Relaxing</span>
@@ -456,7 +595,11 @@
 
                 <article class="text__effect__container">
                     <h1 class="text">Party Table (120,000 Ks)</h1>
-                    <img src="/images/restaurant/Bar.jpg" alt="table-img" class="img__effect">
+                    <picture>
+                        <source srcset="/images/restaurant/Bar.webp" type="image/webp">
+                        <source srcset="/images/restaurant/Bar.jpg" type="image/jpeg">
+                        <img src="/images/restaurant/Bar.jpg" alt="table-img" class="img__effect">
+                    </picture>
                     <div class="moving__text__container">
                         <div class="moving__text">
                             <span>Peace</span>
@@ -471,17 +614,22 @@
 
         <section id="location" class="section">
             <div class="container location__container">
+                <!-- heading section title -->
+                <h1 class="section__title">
+                    Discover Our Restaurant's <span>Location</span>
+                </h1>
+
                 <div class="google__map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15271.696453546305!2d96.06349411212469!3d16.87964809160757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c19586ea186adb%3A0xd964944f69abc2d0!2z4YGFIOGAkeGAreGAleGAuiDhgIDhgKzhgLjhgJnhgL7hgJDhgLrhgJDhgK3hgK_hgIThgLo!5e0!3m2!1sen!2smm!4v1687575931036!5m2!1sen!2smm"
-                        style="border:0;" allowfullscreen="true" loading="lazy"
+                        style="border:0;" allowfullscreen="true" loading="lazy" title="google-map"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
 
         <!-- scroll to home -->
-        <a class="scroll__up" href="#home">
+        <a class="scroll__up" href="#home" aria-label="scroll up to home page">
             <span class="zoomIn"></span>
             <i class="fa-solid fa-circle-chevron-up"></i>
         </a>
@@ -501,7 +649,7 @@
                         <i class="fa-regular fa-user"></i>
                         <input type="text" name="subscribe_email" id="subscibe_email" placeholder="Enter Your Email">
                     </div>
-                    <button class="button subscribe__btn">
+                    <button class="button subscribe__btn" aria-label="subscribe button">
                         <p>subscribe</p>
                     </button>
                 </div>
@@ -521,9 +669,12 @@
                             <div class="content__info__details">
                                 <h3>Address</h3>
                                 <div>
-                                    <a href="https://goo.gl/maps/obGP8GJSqDioxDDG9">
-                                        172 Bobahtoo St. <br>
-                                        Hlaing Thayar, Yangon
+                                    <a href="https://goo.gl/maps/obGP8GJSqDioxDDG9"
+                                        aria-label="restaurant location google map">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                        <p>172 Bobahtoo St. <br>
+                                            Hlaing Thayar, Yangon
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -534,8 +685,14 @@
                             <div class="content__info__details">
                                 <h3>Phone</h3>
                                 <div>
-                                    <a href="tel:09787357071">09787357071</a>
-                                    <a href="tel:09881511244">09881511244</a>
+                                    <a href="tel:09787357071" aria-label="phone call to restaurant">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                        <p>09787357071</p>
+                                    </a>
+                                    <a href="tel:09881511244" aria-label="phone call to restaurant">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                        <p>09881511244</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -545,8 +702,14 @@
                             <div class="content__info__details">
                                 <h3>Email</h3>
                                 <div>
-                                    <a href="mailto:kyawkhaing.kk004@gmail.com">SanCho@gmail.com</a>
-                                    <a href="mailto:kyawkhaing.kk004@gmail.com">SanCho2@gmail.com</a>
+                                    <a href="mailto:kyawkhaing.kk004@gmail.com" aria-label="mail to restaurant">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                        <p>SanCho@gmail.com</p>
+                                    </a>
+                                    <a href="mailto:kyawkhaing.kk004@gmail.com" aria-label="mail to restaurant">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                        <p>SanCho2@gmail.com</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -560,8 +723,8 @@
                         </div>
                         <div class="reservation__button">
                             <h2>Reservation</h2>
-                            <button class="button reservation__btn">
-                                <a href="reservation.html">
+                            <button class="button reservation__btn" aria-label="reservation button">
+                                <a href="reservation.html" aria-label="link to reservation page">
                                     <p>book a table</p>
                                     <i class="fa-solid fa-utensils"></i>
                                 </a>
@@ -575,13 +738,16 @@
                         <div class="usage__info">
                             <h3>About</h3>
                             <div class="about__details">
-                                <a href="#" class="usage__link">
+                                <a href="#" class="usage__link" aria-label="read about restaurant's FAQ">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
                                     <p>FAQ</p>
                                 </a>
-                                <a href="#" class="usage__link">
+                                <a href="#" class="usage__link" aria-label="read about restaurant's Policy">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
                                     <p>Policy</p>
                                 </a>
-                                <a href="#" class="usage__link">
+                                <a href="#" class="usage__link" aria-label="read about restaurant's Terms">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
                                     <p>Terms</p>
                                 </a>
                             </div>
@@ -589,20 +755,28 @@
 
                         <div class="usage__info">
                             <h3>Follow ALong</h3>
-                            <div class="social__medias">
-                                <a href="https://www.facebook.com/profile.php?id=100051889950358&mibextid=ZbWKwL"
-                                    target="_blank" rel="noopener noreferrer" class="social__link">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </a>
-                                <a href="https://instagram.com/kyawkhaing.kk003?igshid=NTc4MTIwNjQ2YQ==" target="_blank"
-                                    rel="noopener noreferrer" class="social__link">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                                <a href="https://t.me/Hugo123hg" target="_blank" rel="noopener noreferrer"
-                                    class="social__link">
-                                    <i class="fa-brands fa-telegram"></i>
-                                </a>
-                            </div>
+                            <ul class="social__lists">
+                                <li class="social__list">
+                                    <a href="https://www.facebook.com/profile.php?id=100051889950358&mibextid=ZbWKwL"
+                                        target="_blank" rel="noopener noreferrer" class="social__link"
+                                        aria-label="link to facebook">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li class="social__list">
+                                    <a href="https://instagram.com/kyawkhaing.kk003?igshid=NTc4MTIwNjQ2YQ=="
+                                        target="_blank" rel="noopener noreferrer" class="social__link"
+                                        aria-label="link to instagram">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="social__list">
+                                    <a href="https://t.me/Hugo123hg" target="_blank" rel="noopener noreferrer"
+                                        class="social__link" aria-label="link to telegram">
+                                        <i class="fa-brands fa-telegram"></i>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -616,7 +790,7 @@
     </footer>
 
     <!-- ===== custom javascript ===== -->
-    <script src="/javascript/user_js/script.js"></script>
+    <script src="/javascript/user_js/script.js" defer></script>
 
     <!-- ===== swiper javascript ===== -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

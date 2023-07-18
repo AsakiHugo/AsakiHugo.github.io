@@ -54,7 +54,7 @@ saveBtns.forEach((saveBtn) => {
         // Check if the input is empty
         if (editInput.value === "") {
             // Display the error message
-            errorSpan.style.display = "block";
+            errorSpan.style.display = "flex";
         } else {
             // Update the value in the profile__editor and display it
             parentEditor.querySelector(".profile__editor p").textContent = editInput.value;
