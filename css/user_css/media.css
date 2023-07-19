@@ -68,6 +68,10 @@
     }
 
     /* ===== Menu ===== */
+    .menus__container .menus__card__container {
+        grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    }
+
     .menu__container .showcase__menu {
         padding: 1.25rem 1rem;
     }
@@ -169,9 +173,9 @@
         padding: 4rem 2rem;
     }
 
-    .text__effect__container .img__effect {
+    .text__effect__container picture .img__effect {
         max-height: 250px;
-        height: 30vh;
+        height: 50vh;
     }
 }
 
@@ -554,12 +558,8 @@
     }
 
     .menus__card .menus__img {
-        width: 12rem;
-        height: 10rem;
-    }
-
-    .menus__card .quick__view {
-        width: 10rem;
+        max-width: 100%;
+        height: 11rem;
     }
 
     .menus__explaination__container .menus__explaination {
@@ -567,17 +567,43 @@
     }
 
     /* ===== Table Info ===== */
-    .text__effect__container .img__effect {
+    .text__effect__container picture .img__effect {
         max-height: 180px;
-        height: 25vh;
-    }
-
-    .text__effect__container .text {
-        font-size: 2.5rem;
+        height: 30vh;
     }
 
     .moving__text span {
         font-size: 5rem;
+    }
+
+    /* ===== Shopping Cart ===== */
+    .shopping__cart .cart__details {
+        align-items: center;
+        padding-inline: 1rem;
+    }
+
+    .cart__details .cart__menu__name {
+        width: 100%;
+        font-size: var(--normal-font-size);
+    }
+
+    .cart__details .quantity__count {
+        gap: 1rem;
+    }
+
+    .quantity__count span {
+        width: 32px;
+        height: 32px;
+    }
+
+    .cart__details .cart__price {
+        font-size: var(--small-font-size);
+        gap: .25rem;
+    }
+
+    .shopping__cart__container .checkout__cart__container {
+        float: auto;
+        max-width: 100%;
     }
 }
 
@@ -875,11 +901,12 @@
         margin: 1.5rem 0;
     }
 
-    .text__effect__container .text {
-        font-size: 1.75rem;
-    }
-
     .moving__text span {
         font-size: 5rem;
+    }
+
+    /* ===== Shopping Cart ===== */
+    .shopping__cart__container {
+        padding: 7rem 1rem 2rem;
     }
 }

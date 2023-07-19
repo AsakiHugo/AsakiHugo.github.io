@@ -5,9 +5,8 @@
     <!-- ===== about website info ===== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SanCho Restaurant Menus" />
-    <meta name="keywords"
-        content="SanCho Restaurant, Online Restaurant Reservation, Online Table Booking, Restaurant Menus, Food Menus" />
+    <meta name="description" content="SanCho Online Restaurant Reservation System" />
+    <meta name="keywords" content="SanCho Restaurant, Online Restaurant Reservation, Shopping cart" />
     <meta name="author" content="Kyaw Khaing" />
     <meta name="contact" content="kyawkhaing.kk004@gmail.com" />
 
@@ -24,6 +23,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ===== swiper cdn ===== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -42,27 +45,29 @@
                 <!-- nav lists -->
                 <ul class="nav__lists">
                     <li class="nav__list">
-                        <a href="user.html#home" class="nav__link" aria-label="link to home page">
+                        <a href="/html/user_html/user.html#home" class="nav__link" aria-label="link to home page">
                             Home
                         </a>
                     </li>
                     <li class="nav__list">
-                        <a href="user.html#menu" class="nav__link" aria-label="link to menu page">
+                        <a href="/html/user_html/user.html#menu" class="nav__link" aria-label="link to menu page">
                             Menu
                         </a>
                     </li>
                     <li class="nav__list">
-                        <a href="user.html#chef" class="nav__link" aria-label="link to chef page">
+                        <a href="/html/user_html/user.html#chef" class="nav__link" aria-label="link to chef page">
                             Chef
                         </a>
                     </li>
                     <li class="nav__list">
-                        <a href="user.html#location" class="nav__link" aria-label="link to about us page">
+                        <a href="/html/user_html/user.html#location" class="nav__link"
+                            aria-label="link to about us page">
                             About
                         </a>
                     </li>
                     <li class="nav__list">
-                        <a href="reservation.html" class="nav__link" aria-label="link to reservation page">
+                        <a href="/html/user_html/reservation.html" class="nav__link"
+                            aria-label="link to reservation page">
                             Reservation
                         </a>
                     </li>
@@ -70,6 +75,7 @@
             </div>
 
             <div class="nav__right">
+
                 <!-- social lists -->
                 <ul class="social__lists">
                     <li class="social__list">
@@ -159,29 +165,102 @@
     </header>
 
     <main class="section">
-        <div class="container menus__container">
+        <section class="container shopping__cart__section">
+            <div class="shopping__cart__container">
+                <!-- heading section title -->
+                <h1 class="section__title">
+                    Shopping <span>Cart</span>
+                </h1>
 
-            <!-- category -->
-            <div class="category__container">
-                <div class="categories">
-                    <p data-filter="all" class="all category active__menus">All</p>
-                    <p data-filter=".dishes" class="dishes category">Dishes</p>
-                    <p data-filter=".drinks" class="drinks category">Drinks</p>
-                    <p data-filter=".desserts" class="desserts category">Desserts</p>
-                    <div class="animation start__all"></div>
+                <div class="cart__container">
+
+                    <div class="shopping__cart">
+                        <div class="shopping__img">
+                            <img src="/images/main_dish/Moussaka.jpg" alt="menu-cart-img">
+                        </div>
+
+                        <div class="cart__details">
+                            <p class="cart__menu__name">Moussaka</p>
+
+                            <div class="quantity__count">
+                                <span class="minus"><i class="fa-solid fa-minus"></i></span>
+                                <p>1</p>
+                                <span class="plus"><i class="fa-solid fa-plus"></i></span>
+                            </div>
+
+                            <div class="cart__price">
+                                <p>12000</p>
+                                <span>MMK</span>
+                            </div>
+                        </div>
+
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+
+                    <div class="shopping__cart">
+                        <div class="shopping__img">
+                            <img src="/images/main_dish/Moussaka.jpg" alt="menu-cart-img">
+                        </div>
+
+                        <div class="cart__details">
+                            <p class="cart__menu__name">Moussaka</p>
+
+                            <div class="quantity__count">
+                                <span class="minus"><i class="fa-solid fa-minus"></i></span>
+                                <p>1</p>
+                                <span class="plus"><i class="fa-solid fa-plus"></i></span>
+                            </div>
+
+                            <div class="cart__price">
+                                <p>12000</p>
+                                <span>MMK</span>
+                            </div>
+                        </div>
+
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+
+                    <div class="shopping__cart">
+                        <div class="shopping__img">
+                            <img src="/images/main_dish/Moussaka.jpg" alt="menu-cart-img">
+                        </div>
+
+                        <div class="cart__details">
+                            <p class="cart__menu__name">Moussaka</p>
+
+                            <div class="quantity__count">
+                                <span class="minus"><i class="fa-solid fa-minus"></i></span>
+                                <p>1</p>
+                                <span class="plus"><i class="fa-solid fa-plus"></i></span>
+                            </div>
+
+                            <div class="cart__price">
+                                <p>12000</p>
+                                <span>MMK</span>
+                            </div>
+                        </div>
+
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
                 </div>
+
+                <div class="checkout__cart__container">
+                    <div class="checkout__cart">
+                        <p class="subtotal">subtotal</p>
+                        <div class="total__price">
+                            <p>12000</p>
+                            <span>MMK</span>
+                        </div>
+                    </div>
+                    <button class="button checkout__btn">check out</button>
+                </div>
+
             </div>
-
-            <!-- horizontal line -->
-            <div class="line"></div>
-
-            <!-- menus container -->
-            <div class="menus__card__container"></div>
-        </div>
+        </section>
     </main>
 
-    <footer class="footer section menus__section">
-        <div class="container footer__container">
+    <footer class="footer section">
+        <div class="container footer__container shopping__footer">
 
             <!-- horizontal sperated line -->
             <hr class="line">
@@ -319,12 +398,6 @@
 
     <!-- ===== custom javascript ===== -->
     <script src="/javascript/user_js/script.js" defer></script>
-
-    <!-- ===== menu ajax ===== -->
-    <script src="/javascript/user_js/menu/menu_ajax.js" defer></script>
-
-    <!-- ===== mixitup cdn ===== -->
-    <script src="/javascript/user_js/mixitup.min.js" defer></script>
 
 </body>
 

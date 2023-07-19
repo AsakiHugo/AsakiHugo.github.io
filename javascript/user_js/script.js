@@ -183,4 +183,54 @@ if (window.location.pathname.includes("user.html")) {
         // Optional: You can clear the input field after sending the email
         emailInput.value = '';
     });
+
+    const contactMail = document.querySelector(".contact__container form #email");
+    const message = document.querySelector(".contact__container form #feedback");
+    const form = document.querySelector(".contact__container form");
+
+    // Contact Validation
+    function checkContact() {
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        let isValid = true;
+
+        if (contactMail.value === "") {
+            contactMail.classList.add("wrong_input");
+            isValid = false;
+        } else if (!contactMail.value.match(emailPattern)) {
+            contactMail.classList.add("wrong_input");
+            isValid = false;
+        } else {
+            contactMail.classList.remove("wrong_input");
+        }
+
+        if (message.value === "") {
+            message.classList.add("wrong_input");
+            isValid = false;
+        } else {
+            message.classList.remove("wrong_input");
+        }
+
+        return isValid;
+    }
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const isValid = checkContact();
+
+        // Calling function on key up
+        contactMail.addEventListener("keyup", checkContact);
+        message.addEventListener("keyup", checkContact);
+
+        if (isValid) {
+            const mailTo = "kyawkhaing.kk004@gmail.com";
+            const mailSubject = "Contact Form Submission";
+            const mailBody = `Email: ${contactMail.value}\nMessage: ${message.value}`;
+            const mailUrl = `mailto:${mailTo}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+
+            // Open default email client with pre-filled fields
+            window.location.href = mailUrl;
+        }
+    });
+
 }
