@@ -129,7 +129,8 @@ h3 {
 
 input,
 select,
-option {
+option,
+textarea {
     font-family: inherit;
 }
 
