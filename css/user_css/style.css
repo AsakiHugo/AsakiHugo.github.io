@@ -649,6 +649,7 @@
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: all .3s ease-in-out 0s;
+    z-index: -1;
 }
 
 .reservation__btn:hover:before {
